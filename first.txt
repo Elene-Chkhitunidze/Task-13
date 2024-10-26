@@ -1,6 +1,0 @@
-dog
-
-cat
-
-
-cow
