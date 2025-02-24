@@ -3,19 +3,23 @@
 <div class="container mt-4">
     <h2>Books List</h2>
 
-
     <a href="{% url 'add_book' %}" class="btn btn-success mb-3">Add New Book</a>
+
+    <form method="GET" class="mb-3">
+        <input type="text" name="q" placeholder="Search by title" class="form-control" value="{{ request.GET.q }}">
+        <button type="submit" class="btn btn-primary mt-2">Search</button>
+    </form>
 
     <ul class="list-group">
         {% for book in books %}
             <li class="list-group-item">
                 <strong>{{ book.title }}</strong> by {{ book.author }} - {{ book.genre }} ({{ book.published_date }})
+                <a href="{% url 'book_detail' book.id %}" class="btn btn-info btn-sm">View Details</a>
             </li>
         {% empty %}
             <li class="list-group-item">No books available.</li>
         {% endfor %}
     </ul>
-
 
     <div class="mt-4">
         <form action="{% url 'logout_' %}" method="post">
@@ -23,6 +27,5 @@
             <button type="submit" class="btn btn-danger">Logout</button>
         </form>
     </div>
-
 </div>
 {% endblock %}
