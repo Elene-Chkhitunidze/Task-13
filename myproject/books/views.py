@@ -8,6 +8,7 @@ from django.contrib.auth.forms import UserCreationForm
 from django.db.models.signals import post_save
 from django.dispatch import receiver
 from django.http import HttpResponseForbidden
+from .logs import log_action
 
 def book_list(request):
     query = request.GET.get('q')
@@ -73,4 +74,20 @@ def book_detail(request, book_id):
 def delete_book(request, book_id):
     book = get_object_or_404(Book, id=book_id)
     book.delete()
+    log_action(f'Book "{book.title}" deleted by {request.user}')
     return redirect('book_list')
+
+@login_required
+def update_book(request, book_id):
+    book = get_object_or_404(Book, id=book_id)
+
+    if request.method == 'POST':
+        form = BookForm(request.POST, instance=book)
+        if form.is_valid():
+            form.save()
+            log_action(f'Book "{book.title}" updated by {request.user}')
+            return redirect('book_list')
+    else:
+        form = BookForm(instance=book)
+
+    return render(request, 'books/update_book.html', {'form': form, 'book': book})

@@ -1,0 +1,50 @@
+2025-02-26 19:49:36,088 INFO Watching for file changes with StatReloader
+2025-02-26 19:52:42,497 INFO "GET / HTTP/1.1" 200 963
+2025-02-26 19:52:43,955 WARNING Not Found: /favicon.ico
+2025-02-26 19:52:43,959 WARNING "GET /favicon.ico HTTP/1.1" 404 4050
+2025-02-26 19:52:50,415 INFO "GET /?q=count HTTP/1.1" 200 784
+2025-02-26 19:52:58,495 INFO "GET /?q=adv HTTP/1.1" 200 966
+2025-02-26 19:52:59,850 INFO "GET /books/2/ HTTP/1.1" 200 1683
+2025-02-26 19:53:02,609 INFO "GET / HTTP/1.1" 200 963
+2025-02-26 19:54:01,336 WARNING Not Found: /books/1/update/
+2025-02-26 19:54:01,337 WARNING "GET /books/1/update/ HTTP/1.1" 404 4062
+2025-02-26 19:55:43,926 INFO C:\Users\Elene\PycharmProjects\pythonProject\myproject\books\urls.py changed, reloading.
+2025-02-26 19:55:52,396 INFO Watching for file changes with StatReloader
+2025-02-26 19:57:06,833 INFO Watching for file changes with StatReloader
+2025-02-26 19:57:25,293 INFO "GET / HTTP/1.1" 200 963
+2025-02-26 19:57:30,383 WARNING Not Found: /books/1/update/
+2025-02-26 19:57:30,387 WARNING "GET /books/1/update/ HTTP/1.1" 404 4519
+2025-02-26 19:57:39,802 INFO "GET /admin/ HTTP/1.1" 200 8905
+2025-02-26 19:57:39,938 INFO "GET /static/admin/css/base.css HTTP/1.1" 304 0
+2025-02-26 19:57:39,985 INFO "GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+2025-02-26 19:57:40,014 INFO "GET /static/admin/js/theme.js HTTP/1.1" 304 0
+2025-02-26 19:57:40,443 INFO "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+2025-02-26 19:57:40,619 INFO "GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+2025-02-26 19:57:40,687 INFO "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+2025-02-26 19:57:40,694 INFO "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+2025-02-26 19:57:40,730 INFO "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+2025-02-26 19:57:40,730 INFO "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+2025-02-26 19:57:40,732 INFO "GET /static/admin/img/icon-deletelink.svg HTTP/1.1" 304 0
+2025-02-26 19:57:44,910 WARNING Not Found: /update
+2025-02-26 19:57:44,911 WARNING "GET /update HTTP/1.1" 404 4321
+2025-02-26 19:58:14,232 WARNING Not Found: /books/1/update/
+2025-02-26 19:58:14,233 WARNING "GET /books/1/update/ HTTP/1.1" 404 4519
+2025-02-26 20:01:25,409 INFO Watching for file changes with StatReloader
+2025-02-26 20:01:53,348 INFO "GET / HTTP/1.1" 200 963
+2025-02-26 20:02:35,114 INFO "GET /books/2/update/ HTTP/1.1" 200 1954
+2025-02-26 20:02:46,700 INFO "POST /books/2/update/ HTTP/1.1" 302 0
+2025-02-26 20:02:46,719 INFO "GET / HTTP/1.1" 200 963
+2025-02-26 20:06:23,289 INFO Watching for file changes with StatReloader
+2025-02-26 20:06:26,856 INFO "GET / HTTP/1.1" 200 1200
+2025-02-26 20:06:37,735 INFO "GET /books/2/update/ HTTP/1.1" 200 1954
+2025-02-26 20:06:43,634 INFO "POST /books/2/update/ HTTP/1.1" 302 0
+2025-02-26 20:06:43,663 INFO "GET / HTTP/1.1" 200 1200
+2025-02-26 20:06:46,877 INFO "GET /books/2/ HTTP/1.1" 200 1683
+2025-02-26 20:06:49,240 INFO "GET / HTTP/1.1" 200 1200
+2025-02-26 20:06:54,937 INFO "GET /add/ HTTP/1.1" 200 2063
+2025-02-26 20:08:02,370 INFO "POST /add/ HTTP/1.1" 302 0
+2025-02-26 20:08:02,449 INFO "GET / HTTP/1.1" 200 1676
+2025-02-26 20:08:04,894 INFO "GET /books/6/update/ HTTP/1.1" 200 1670
+2025-02-26 20:08:10,703 INFO "POST /books/6/update/ HTTP/1.1" 302 0
+2025-02-26 20:08:10,738 INFO "GET / HTTP/1.1" 200 1675
+2025-02-26 20:08:15,669 INFO "GET /books/6/ HTTP/1.1" 200 1396

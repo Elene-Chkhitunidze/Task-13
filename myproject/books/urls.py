@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import book_list, add_book, register, login_, logout_, book_detail, delete_book
+from .views import book_list, add_book, register, login_, logout_, book_detail, delete_book, update_book
 
 urlpatterns = [
     path('', book_list, name='book_list'),
@@ -9,4 +9,5 @@ urlpatterns = [
     path('logout/', logout_, name='logout_'),
     path('books/<int:book_id>/', book_detail, name='book_detail'),
     path('books/<int:book_id>/delete/', delete_book, name='delete_book'),
+    path("books/<int:book_id>/update/", update_book, name="update_book"),
 ]

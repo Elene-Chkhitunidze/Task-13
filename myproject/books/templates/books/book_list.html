@@ -12,9 +12,14 @@
 
     <ul class="list-group">
         {% for book in books %}
-            <li class="list-group-item">
-                <strong>{{ book.title }}</strong> by {{ book.author }} - {{ book.genre }} ({{ book.published_date }})
-                <a href="{% url 'book_detail' book.id %}" class="btn btn-info btn-sm">View Details</a>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                <div>
+                    <strong>{{ book.title }}</strong> by {{ book.author }} - {{ book.genre }} ({{ book.published_date }})
+                </div>
+                <div>
+                    <a href="{% url 'book_detail' book.id %}" class="btn btn-info btn-sm">View Details</a>
+                    <a href="{% url 'update_book' book.id %}" class="btn btn-warning btn-sm">Update</a>
+                </div>
             </li>
         {% empty %}
             <li class="list-group-item">No books available.</li>
