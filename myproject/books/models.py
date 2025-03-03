@@ -12,6 +12,7 @@ class Book(models.Model):
     genre = models.ForeignKey(Genre, on_delete=models.CASCADE)
     published_date = models.DateField()
     description = models.TextField()
+    cover_image = models.ImageField(upload_to='book_covers/', blank=True, null=True)
 
     def __str__(self):
         return self.title

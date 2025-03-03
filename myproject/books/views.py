@@ -9,16 +9,22 @@ from django.db.models.signals import post_save
 from django.dispatch import receiver
 from django.http import HttpResponseForbidden
 from .logs import log_action
+from django.core.paginator import Paginator
+
 
 def book_list(request):
     query = request.GET.get('q')
     books = Book.objects.filter(title__icontains=query) if query else Book.objects.all()
+
+    paginator = Paginator(books, 5)
+    page_number = request.GET.get('page')
+    books = paginator.get_page(page_number)
     return render(request, 'books/book_list.html', {'books': books})
 
 @login_required
 def add_book(request):
     if request.method == 'POST':
-        form = BookForm(request.POST)
+        form = BookForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
             return redirect('book_list')

@@ -6,7 +6,7 @@ from crispy_forms.layout import Submit
 class BookForm(forms.ModelForm):
     class Meta:
         model = Book
-        fields = ['title', 'author', 'genre', 'published_date', 'description']
+        fields = ['title', 'author', 'genre', 'published_date', 'description', 'cover_image']
         widgets = {
             'published_date': forms.DateInput(attrs={'type': 'date'}),
         }
