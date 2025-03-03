@@ -1,0 +1,158 @@
+2025-02-26 19:49:36,088 INFO Watching for file changes with StatReloader
+2025-02-26 19:52:42,497 INFO "GET / HTTP/1.1" 200 963
+2025-02-26 19:52:43,955 WARNING Not Found: /favicon.ico
+2025-02-26 19:52:43,959 WARNING "GET /favicon.ico HTTP/1.1" 404 4050
+2025-02-26 19:52:50,415 INFO "GET /?q=count HTTP/1.1" 200 784
+2025-02-26 19:52:58,495 INFO "GET /?q=adv HTTP/1.1" 200 966
+2025-02-26 19:52:59,850 INFO "GET /books/2/ HTTP/1.1" 200 1683
+2025-02-26 19:53:02,609 INFO "GET / HTTP/1.1" 200 963
+2025-02-26 19:54:01,336 WARNING Not Found: /books/1/update/
+2025-02-26 19:54:01,337 WARNING "GET /books/1/update/ HTTP/1.1" 404 4062
+2025-02-26 19:55:43,926 INFO C:\Users\Elene\PycharmProjects\pythonProject\myproject\books\urls.py changed, reloading.
+2025-02-26 19:55:52,396 INFO Watching for file changes with StatReloader
+2025-02-26 19:57:06,833 INFO Watching for file changes with StatReloader
+2025-02-26 19:57:25,293 INFO "GET / HTTP/1.1" 200 963
+2025-02-26 19:57:30,383 WARNING Not Found: /books/1/update/
+2025-02-26 19:57:30,387 WARNING "GET /books/1/update/ HTTP/1.1" 404 4519
+2025-02-26 19:57:39,802 INFO "GET /admin/ HTTP/1.1" 200 8905
+2025-02-26 19:57:39,938 INFO "GET /static/admin/css/base.css HTTP/1.1" 304 0
+2025-02-26 19:57:39,985 INFO "GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+2025-02-26 19:57:40,014 INFO "GET /static/admin/js/theme.js HTTP/1.1" 304 0
+2025-02-26 19:57:40,443 INFO "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+2025-02-26 19:57:40,619 INFO "GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+2025-02-26 19:57:40,687 INFO "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+2025-02-26 19:57:40,694 INFO "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+2025-02-26 19:57:40,730 INFO "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+2025-02-26 19:57:40,730 INFO "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+2025-02-26 19:57:40,732 INFO "GET /static/admin/img/icon-deletelink.svg HTTP/1.1" 304 0
+2025-02-26 19:57:44,910 WARNING Not Found: /update
+2025-02-26 19:57:44,911 WARNING "GET /update HTTP/1.1" 404 4321
+2025-02-26 19:58:14,232 WARNING Not Found: /books/1/update/
+2025-02-26 19:58:14,233 WARNING "GET /books/1/update/ HTTP/1.1" 404 4519
+2025-02-26 20:01:25,409 INFO Watching for file changes with StatReloader
+2025-02-26 20:01:53,348 INFO "GET / HTTP/1.1" 200 963
+2025-02-26 20:02:35,114 INFO "GET /books/2/update/ HTTP/1.1" 200 1954
+2025-02-26 20:02:46,700 INFO "POST /books/2/update/ HTTP/1.1" 302 0
+2025-02-26 20:02:46,719 INFO "GET / HTTP/1.1" 200 963
+2025-02-26 20:06:23,289 INFO Watching for file changes with StatReloader
+2025-02-26 20:06:26,856 INFO "GET / HTTP/1.1" 200 1200
+2025-02-26 20:06:37,735 INFO "GET /books/2/update/ HTTP/1.1" 200 1954
+2025-02-26 20:06:43,634 INFO "POST /books/2/update/ HTTP/1.1" 302 0
+2025-02-26 20:06:43,663 INFO "GET / HTTP/1.1" 200 1200
+2025-02-26 20:06:46,877 INFO "GET /books/2/ HTTP/1.1" 200 1683
+2025-02-26 20:06:49,240 INFO "GET / HTTP/1.1" 200 1200
+2025-02-26 20:06:54,937 INFO "GET /add/ HTTP/1.1" 200 2063
+2025-02-26 20:08:02,370 INFO "POST /add/ HTTP/1.1" 302 0
+2025-02-26 20:08:02,449 INFO "GET / HTTP/1.1" 200 1676
+2025-02-26 20:08:04,894 INFO "GET /books/6/update/ HTTP/1.1" 200 1670
+2025-02-26 20:08:10,703 INFO "POST /books/6/update/ HTTP/1.1" 302 0
+2025-02-26 20:08:10,738 INFO "GET / HTTP/1.1" 200 1675
+2025-02-26 20:08:15,669 INFO "GET /books/6/ HTTP/1.1" 200 1396
+2025-03-03 22:24:23,238 INFO Watching for file changes with StatReloader
+2025-03-03 22:25:48,355 INFO Watching for file changes with StatReloader
+2025-03-03 22:25:52,393 ERROR Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 354, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: books_book.cover_image
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\myproject\books\views.py", line 22, in book_list
+    return render(request, 'books/book_list.html', {'books': books})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\template\loader_tags.py", line 56, in render
+    result = self.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\template\defaulttags.py", line 199, in render
+    len_values = len(values)
+                 ^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\core\paginator.py", line 191, in __len__
+    return len(self.object_list)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\db\models\query.py", line 382, in __len__
+    self._fetch_all()
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\db\models\query.py", line 1928, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1574, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 354, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such column: books_book.cover_image
+2025-03-03 22:25:52,399 ERROR "GET / HTTP/1.1" 500 188392
+2025-03-03 22:25:52,825 WARNING Not Found: /favicon.ico
+2025-03-03 22:25:52,826 WARNING "GET /favicon.ico HTTP/1.1" 404 4595
+2025-03-03 22:26:56,518 INFO Watching for file changes with StatReloader
+2025-03-03 22:26:58,363 INFO "GET / HTTP/1.1" 200 1635
+2025-03-03 22:27:12,341 INFO "GET /books/2/ HTTP/1.1" 200 1683
+2025-03-03 22:27:14,247 INFO "GET / HTTP/1.1" 200 1635
+2025-03-03 22:27:15,401 INFO "GET /books/2/update/ HTTP/1.1" 200 2114
+2025-03-03 22:27:17,252 INFO "POST /books/2/update/ HTTP/1.1" 302 0
+2025-03-03 22:27:17,268 INFO "GET / HTTP/1.1" 200 1635
+2025-03-03 22:32:01,472 INFO Watching for file changes with StatReloader
+2025-03-03 22:32:04,775 INFO "GET / HTTP/1.1" 200 1635
+2025-03-03 22:32:09,545 INFO "GET /add/ HTTP/1.1" 200 2366
+2025-03-03 22:33:23,726 INFO "GET /add/ HTTP/1.1" 200 2366
+2025-03-03 22:34:32,999 INFO "POST /add/ HTTP/1.1" 302 0
+2025-03-03 22:34:33,014 INFO "GET / HTTP/1.1" 200 2287
+2025-03-03 22:34:33,223 INFO "GET /media/book_covers/cover.jpg HTTP/1.1" 200 144278
