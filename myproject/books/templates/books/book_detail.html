@@ -15,7 +15,18 @@
         <p><strong>Published Date:</strong> {{ book.published_date }}</p>
         <p><strong>Description:</strong> {{ book.description }}</p>
 
+        {% if book.cover_image %}
+            <img src="{{ book.cover_image.url }}" alt="{{ book.title }}" class="img-fluid" width="200">
+        {% endif %}
+
         <a href="{% url 'book_list' %}" class="btn btn-secondary">Back</a>
+
+        {% if user.is_authenticated %}
+            <form action="{% url 'buy_book' book.id %}" method="post" class="d-inline">
+                {% csrf_token %}
+                <button type="submit" class="btn btn-success">Buy</button>
+            </form>
+        {% endif %}
 
         {% if user.is_authenticated and user.is_staff %}
             <form action="{% url 'delete_book' book.id %}" method="post" class="d-inline">

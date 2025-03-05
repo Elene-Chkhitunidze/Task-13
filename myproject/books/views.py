@@ -10,7 +10,11 @@ from django.dispatch import receiver
 from django.http import HttpResponseForbidden
 from .logs import log_action
 from django.core.paginator import Paginator
-
+from django.core.mail import send_mail
+from .models import Order
+from django.contrib.auth.forms import PasswordChangeForm, PasswordResetForm
+from django.contrib.auth import update_session_auth_hash
+from django.conf import settings
 
 def book_list(request):
     query = request.GET.get('q')
@@ -97,3 +101,45 @@ def update_book(request, book_id):
         form = BookForm(instance=book)
 
     return render(request, 'books/update_book.html', {'form': form, 'book': book})
+
+def send_order_email(user, book):
+    subject = 'Order Confirmation'
+    message = f'Thank you {user.username}, you have successfully purchased {book.title}.'
+    send_mail(subject, message, 'your_email@gmail.com', [user.email])
+
+@login_required
+def buy_book(request, book_id):
+    book = get_object_or_404(Book, id=book_id)
+    order = Order.objects.create(user=request.user, book=book)
+    send_order_email(request.user, book)
+    return redirect('book_list')
+
+
+@login_required
+def change_password(request):
+    if request.method == 'POST':
+        form = PasswordChangeForm(request.user, request.POST)
+        if form.is_valid():
+            user = form.save()
+            update_session_auth_hash(request, user)  # თავიდან ავიცილოთ logout
+            return redirect('book_list')
+    else:
+        form = PasswordChangeForm(request.user)
+    return render(request, 'books/change_password.html', {'form': form})
+
+def reset_password(request):
+    if request.method == 'POST':
+        form = PasswordResetForm(request.POST)
+        if form.is_valid():
+
+            form.save(
+                request=request,
+                from_email=settings.DEFAULT_FROM_EMAIL
+            )
+
+            return redirect('password_reset_done')
+
+    else:
+        form = PasswordResetForm()
+
+    return render(request, 'books/reset_password.html', {'form': form})
