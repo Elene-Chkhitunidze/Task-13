@@ -3,6 +3,7 @@ from .models import Book
 from crispy_forms.helper import FormHelper
 from crispy_forms.layout import Submit
 
+
 class BookForm(forms.ModelForm):
     class Meta:
         model = Book

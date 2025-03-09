@@ -1,145 +1,153 @@
 from django.shortcuts import render, redirect, get_object_or_404
-from .models import Book
-from .forms import BookForm
 from django.contrib.auth import login, authenticate, logout
 from django.contrib.auth.models import User, Group
 from django.contrib.auth.decorators import login_required, user_passes_test
-from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.forms import UserCreationForm, PasswordChangeForm, PasswordResetForm
 from django.db.models.signals import post_save
 from django.dispatch import receiver
-from django.http import HttpResponseForbidden
-from .logs import log_action
 from django.core.paginator import Paginator
 from django.core.mail import send_mail
-from .models import Order
-from django.contrib.auth.forms import PasswordChangeForm, PasswordResetForm
 from django.contrib.auth import update_session_auth_hash
 from django.conf import settings
+from django.views import View
+from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView, FormView
+from django.urls import reverse_lazy
+from .models import Book, Order
+from .forms import BookForm
+from .logs import log_action
+from django.http import HttpResponseForbidden
 
-def book_list(request):
-    query = request.GET.get('q')
-    books = Book.objects.filter(title__icontains=query) if query else Book.objects.all()
 
-    paginator = Paginator(books, 5)
-    page_number = request.GET.get('page')
-    books = paginator.get_page(page_number)
-    return render(request, 'books/book_list.html', {'books': books})
+class BookListView(ListView):
+    model = Book
+    template_name = 'books/book_list.html'
+    context_object_name = 'books'
+    paginate_by = 5
 
-@login_required
-def add_book(request):
-    if request.method == 'POST':
-        form = BookForm(request.POST, request.FILES)
-        if form.is_valid():
-            form.save()
-            return redirect('book_list')
-    else:
-        form = BookForm()
-    return render(request, 'books/add_book.html', {'form': form})
+    def get_queryset(self):
+        query = self.request.GET.get('q')
+        return Book.objects.filter(title__icontains=query) if query else Book.objects.all()
 
-class Register(UserCreationForm):
-    class Meta:
-        model = User
-        fields = ['username', 'password1', 'password2']
 
-def register(request):
-    if request.method == 'POST':
-        form = Register(request.POST)
-        if form.is_valid():
-            user = form.save()
-            default_group, _ = Group.objects.get_or_create(name='Default')
-            user.groups.add(default_group)
-            login(request, user)
-            return redirect('book_list')
-    else:
-        form = Register()
-    return render(request, 'books/register.html', {'form': form})
+class BookDetailView(DetailView):
+    model = Book
+    template_name = 'books/book_detail.html'
+    context_object_name = 'book'
 
-def login_(request):
-    if request.method == 'POST':
+
+class BookCreateView(CreateView):
+    model = Book
+    form_class = BookForm
+    template_name = 'books/add_book.html'
+    success_url = reverse_lazy('book_list')
+
+
+class BookUpdateView(UpdateView):
+    model = Book
+    form_class = BookForm
+    template_name = 'books/update_book.html'
+    success_url = reverse_lazy('book_list')
+
+    def form_valid(self, form):
+        response = super().form_valid(form)
+        log_action(f'Book "{self.object.title}" updated by {self.request.user}')
+        return response
+
+
+class BookDeleteView(DeleteView):
+    model = Book
+    template_name = 'books/book_confirm_delete.html'
+    success_url = reverse_lazy('book_list')
+
+    def dispatch(self, request, *args, **kwargs):
+        if not request.user.is_authenticated or not request.user.is_staff:
+            return HttpResponseForbidden()
+        return super().dispatch(request, *args, **kwargs)
+
+    def delete(self, request, *args, **kwargs):
+        book = self.get_object()
+        log_action(f'Book "{book.title}" deleted by {request.user}')
+        return super().delete(request, *args, **kwargs)
+
+
+class RegisterView(FormView):
+    template_name = 'books/register.html'
+    form_class = UserCreationForm
+    success_url = reverse_lazy('book_list')
+
+    def form_valid(self, form):
+        user = form.save()
+        default_group, _ = Group.objects.get_or_create(name='Default')
+        user.groups.add(default_group)
+        login(self.request, user)
+        return super().form_valid(form)
+
+
+class LoginView(View):
+    template_name = 'books/login.html'
+
+    def get(self, request):
+        return render(request, self.template_name)
+
+    def post(self, request):
         username = request.POST['username']
         password = request.POST['password']
         user = authenticate(request, username=username, password=password)
         if user:
             login(request, user)
             return redirect('book_list')
-        return render(request, 'books/login.html', {'error': 'Invalid Credentials'})
-    return render(request, 'books/login.html')
+        return render(request, self.template_name, {'error': 'Invalid Credentials'})
 
-def logout_(request):
-    logout(request)
-    return redirect('login_')
+
+class LogoutView(View):
+    def get(self, request):
+        logout(request)
+        return redirect('login_')
+
+
+class BuyBookView(View):
+    def post(self, request, book_id):
+        if not request.user.is_authenticated:
+            return redirect('login_')
+
+        book = get_object_or_404(Book, id=book_id)
+        order = Order.objects.create(user=request.user, book=book)
+        self.send_order_email(request.user, book)
+        return redirect('book_list')
+
+    def send_order_email(self, user, book):
+        subject = 'Order Confirmation'
+        message = f'Thank you {user.username}, you have successfully purchased {book.title}.'
+        send_mail(subject, message, 'your_email@gmail.com', [user.email])
+
+
+class ChangePasswordView(FormView):
+    template_name = 'books/change_password.html'
+    form_class = PasswordChangeForm
+
+    def form_valid(self, form):
+        user = form.save()
+        update_session_auth_hash(self.request, user)
+        return redirect('book_list')
+
+    def get_form_kwargs(self):
+        kwargs = super().get_form_kwargs()
+        kwargs['user'] = self.request.user
+        return kwargs
+
+
+class ResetPasswordView(FormView):
+    template_name = 'books/reset_password.html'
+    form_class = PasswordResetForm
+    success_url = reverse_lazy('password_reset_done')
+
+    def form_valid(self, form):
+        form.save(request=self.request, from_email=settings.DEFAULT_FROM_EMAIL)
+        return super().form_valid(form)
+
 
 @receiver(post_save, sender=User)
 def add_user(sender, instance, created, **kwargs):
     if created:
         default_group = Group.objects.get(name='Default')
         instance.groups.add(default_group)
-
-def book_detail(request, book_id):
-    book = get_object_or_404(Book, id=book_id)
-    context = {'book': book}
-    return render(request, 'books/book_detail.html', context)
-
-@user_passes_test(lambda u: u.is_authenticated and u.is_staff)
-def delete_book(request, book_id):
-    book = get_object_or_404(Book, id=book_id)
-    book.delete()
-    log_action(f'Book "{book.title}" deleted by {request.user}')
-    return redirect('book_list')
-
-@login_required
-def update_book(request, book_id):
-    book = get_object_or_404(Book, id=book_id)
-
-    if request.method == 'POST':
-        form = BookForm(request.POST, instance=book)
-        if form.is_valid():
-            form.save()
-            log_action(f'Book "{book.title}" updated by {request.user}')
-            return redirect('book_list')
-    else:
-        form = BookForm(instance=book)
-
-    return render(request, 'books/update_book.html', {'form': form, 'book': book})
-
-def send_order_email(user, book):
-    subject = 'Order Confirmation'
-    message = f'Thank you {user.username}, you have successfully purchased {book.title}.'
-    send_mail(subject, message, 'your_email@gmail.com', [user.email])
-
-@login_required
-def buy_book(request, book_id):
-    book = get_object_or_404(Book, id=book_id)
-    order = Order.objects.create(user=request.user, book=book)
-    send_order_email(request.user, book)
-    return redirect('book_list')
-
-
-@login_required
-def change_password(request):
-    if request.method == 'POST':
-        form = PasswordChangeForm(request.user, request.POST)
-        if form.is_valid():
-            user = form.save()
-            update_session_auth_hash(request, user)  # თავიდან ავიცილოთ logout
-            return redirect('book_list')
-    else:
-        form = PasswordChangeForm(request.user)
-    return render(request, 'books/change_password.html', {'form': form})
-
-def reset_password(request):
-    if request.method == 'POST':
-        form = PasswordResetForm(request.POST)
-        if form.is_valid():
-
-            form.save(
-                request=request,
-                from_email=settings.DEFAULT_FROM_EMAIL
-            )
-
-            return redirect('password_reset_done')
-
-    else:
-        form = PasswordResetForm()
-
-    return render(request, 'books/reset_password.html', {'form': form})
