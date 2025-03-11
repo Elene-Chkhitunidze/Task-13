@@ -874,3 +874,18 @@ NameError: name 'logging' is not defined. Did you mean: 'login'? Or did you forg
 2025-03-10 01:21:20,599 INFO "GET /static/admin/css/widgets.css HTTP/1.1" 200 11564
 2025-03-10 01:23:50,689 INFO C:\Users\Elene\PycharmProjects\pythonProject\myproject\myproject\books\views.py changed, reloading.
 2025-03-10 01:23:51,882 INFO Watching for file changes with StatReloader
+2025-03-11 22:41:16,771 INFO Watching for file changes with StatReloader
+2025-03-11 22:41:27,092 INFO "GET / HTTP/1.1" 200 2904
+2025-03-11 22:41:27,240 INFO "GET /media/book_covers/cover.jpg HTTP/1.1" 304 0
+2025-03-11 22:41:27,240 INFO "GET /media/book_covers/fr.jpg HTTP/1.1" 304 0
+2025-03-11 22:41:27,379 WARNING Not Found: /favicon.ico
+2025-03-11 22:41:27,379 WARNING "GET /favicon.ico HTTP/1.1" 404 6517
+2025-03-11 22:41:29,568 INFO "GET /books/2/update/ HTTP/1.1" 200 2114
+2025-03-11 22:41:32,871 INFO "GET /books/8/update/ HTTP/1.1" 200 2217
+2025-03-11 22:41:35,472 INFO "GET /books/2/ HTTP/1.1" 200 1512
+2025-03-11 22:41:36,578 INFO "POST /buy/2/ HTTP/1.1" 302 0
+2025-03-11 22:41:36,595 INFO "GET / HTTP/1.1" 200 2904
+2025-03-11 22:41:40,806 INFO "GET /login/ HTTP/1.1" 200 590
+2025-03-11 22:42:54,254 INFO Watching for file changes with StatReloader
+2025-03-11 22:42:55,383 INFO "GET / HTTP/1.1" 200 2904
+2025-03-11 22:42:57,551 INFO "GET /add/ HTTP/1.1" 200 2365
