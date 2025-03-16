@@ -21,7 +21,16 @@ from django.urls import path
 from django.contrib import admin
 from django.urls import path, include
 
+from django.contrib import admin
+from django.urls import path, include
+from django.shortcuts import redirect
+
+
+def redirect_to_books(request):
+    return redirect('/api/books/')
+
 urlpatterns = [
+    path('', redirect_to_books),
     path('admin/', admin.site.urls),
-    path('', include('books.urls')),
+    path('api/', include('books.urls')),
 ]

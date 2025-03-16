@@ -889,3 +889,73 @@ NameError: name 'logging' is not defined. Did you mean: 'login'? Or did you forg
 2025-03-11 22:42:54,254 INFO Watching for file changes with StatReloader
 2025-03-11 22:42:55,383 INFO "GET / HTTP/1.1" 200 2904
 2025-03-11 22:42:57,551 INFO "GET /add/ HTTP/1.1" 200 2365
+2025-03-17 01:00:38,273 INFO Watching for file changes with StatReloader
+2025-03-17 01:00:41,173 WARNING Not Found: /
+2025-03-17 01:00:41,173 WARNING "GET / HTTP/1.1" 404 4308
+2025-03-17 01:00:41,343 WARNING Not Found: /favicon.ico
+2025-03-17 01:00:41,344 WARNING "GET /favicon.ico HTTP/1.1" 404 4359
+2025-03-17 01:03:48,337 INFO C:\Users\Elene\PycharmProjects\pythonProject\myproject\myproject\myproject\urls.py changed, reloading.
+2025-03-17 01:03:49,339 INFO Watching for file changes with StatReloader
+2025-03-17 01:04:01,064 INFO Watching for file changes with StatReloader
+2025-03-17 01:05:01,058 INFO Watching for file changes with StatReloader
+2025-03-17 01:05:25,117 INFO Watching for file changes with StatReloader
+2025-03-17 01:05:27,292 WARNING Not Found: /
+2025-03-17 01:05:27,295 WARNING "GET / HTTP/1.1" 404 2307
+2025-03-17 01:08:19,403 INFO C:\Users\Elene\PycharmProjects\pythonProject\myproject\myproject\myproject\urls.py changed, reloading.
+2025-03-17 01:08:20,604 INFO Watching for file changes with StatReloader
+2025-03-17 01:08:37,548 INFO C:\Users\Elene\PycharmProjects\pythonProject\myproject\myproject\myproject\urls.py changed, reloading.
+2025-03-17 01:08:40,146 INFO Watching for file changes with StatReloader
+2025-03-17 01:08:42,107 INFO "GET / HTTP/1.1" 302 0
+2025-03-17 01:08:42,145 INFO "GET /api/books/ HTTP/1.1" 200 9177
+2025-03-17 01:08:42,376 INFO "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121457
+2025-03-17 01:08:42,380 INFO "GET /static/rest_framework/js/csrf.js HTTP/1.1" 200 1793
+2025-03-17 01:08:42,383 INFO "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 200 39680
+2025-03-17 01:08:42,386 INFO "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 200 13632
+2025-03-17 01:08:42,390 INFO "GET /static/rest_framework/js/default.js HTTP/1.1" 200 1268
+2025-03-17 01:08:42,390 INFO "GET /static/rest_framework/js/load-ajax-form.js HTTP/1.1" 200 59
+2025-03-17 01:08:42,390 INFO "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 200 3426
+2025-03-17 01:08:42,400 INFO "GET /static/rest_framework/css/prettify.css HTTP/1.1" 200 817
+2025-03-17 01:08:42,400 INFO "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 200 3796
+2025-03-17 01:08:42,400 INFO "GET /static/rest_framework/css/default.css HTTP/1.1" 200 1152
+2025-03-17 01:08:42,400 INFO "GET /static/rest_framework/js/jquery-3.7.1.min.js HTTP/1.1" 200 87533
+2025-03-17 01:08:42,421 INFO "GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458
+2025-03-17 01:08:52,923 INFO "OPTIONS /api/books/ HTTP/1.1" 200 5547
+2025-03-17 01:08:54,831 INFO "GET /api/books/ HTTP/1.1" 200 9177
+2025-03-17 01:12:16,981 WARNING Not Found: /api/token/
+2025-03-17 01:12:16,981 WARNING "GET /api/token/ HTTP/1.1" 404 4531
+2025-03-17 01:12:45,232 WARNING Method Not Allowed: /api/api/token/
+2025-03-17 01:12:45,232 WARNING "GET /api/api/token/ HTTP/1.1" 405 7629
+2025-03-17 01:12:45,257 INFO "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+2025-03-17 01:12:45,257 INFO "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+2025-03-17 01:12:45,261 INFO "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+2025-03-17 01:12:45,261 INFO "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+2025-03-17 01:12:45,261 INFO "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+2025-03-17 01:12:45,267 INFO "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+2025-03-17 01:12:45,267 INFO "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+2025-03-17 01:12:45,269 INFO "GET /static/rest_framework/js/jquery-3.7.1.min.js HTTP/1.1" 304 0
+2025-03-17 01:12:45,269 INFO "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+2025-03-17 01:12:45,269 INFO "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+2025-03-17 01:12:45,269 INFO "GET /static/rest_framework/js/load-ajax-form.js HTTP/1.1" 304 0
+2025-03-17 01:12:45,272 INFO "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+2025-03-17 01:12:53,834 WARNING Unauthorized: /api/api/token/
+2025-03-17 01:12:53,836 WARNING "POST /api/api/token/ HTTP/1.1" 401 7569
+2025-03-17 01:13:59,721 INFO "GET /api/books/ HTTP/1.1" 200 9177
+2025-03-17 01:14:30,459 INFO "GET /api/books/ HTTP/1.1" 200 9177
+2025-03-17 01:14:30,485 INFO "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+2025-03-17 01:14:30,485 INFO "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+2025-03-17 01:14:30,485 INFO "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+2025-03-17 01:14:30,485 INFO "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+2025-03-17 01:14:30,488 INFO "GET /static/rest_framework/js/jquery-3.7.1.min.js HTTP/1.1" 304 0
+2025-03-17 01:14:30,491 INFO "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+2025-03-17 01:14:30,491 INFO "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+2025-03-17 01:14:30,491 INFO "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+2025-03-17 01:14:30,491 INFO "GET /static/rest_framework/js/load-ajax-form.js HTTP/1.1" 304 0
+2025-03-17 01:14:30,491 INFO "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+2025-03-17 01:14:30,491 INFO "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+2025-03-17 01:14:34,372 INFO "OPTIONS /api/books/ HTTP/1.1" 200 5547
+2025-03-17 01:14:37,815 INFO "GET /api/books/ HTTP/1.1" 200 9177
+2025-03-17 01:14:38,862 INFO "GET /api/books/ HTTP/1.1" 200 9177
+2025-03-17 01:15:15,925 INFO "GET /api/books/ HTTP/1.1" 200 9177
+2025-03-17 01:15:17,554 INFO "OPTIONS /api/books/ HTTP/1.1" 200 5547
+2025-03-17 01:15:42,252 INFO "OPTIONS /api/books/ HTTP/1.1" 200 5547
+2025-03-17 01:20:07,282 INFO C:\Users\Elene\PycharmProjects\pythonProject\myproject\myproject\books\views.py changed, reloading.
