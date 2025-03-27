@@ -1,0 +1,18 @@
+{% extends 'base_generic.html' %}
+
+{% block title %}Job List{% endblock %}
+
+{% block content %}
+  <h1>Job List</h1>
+  <ul>
+    {% for job in jobs %}
+      <li>
+        <a href="{% url 'job_detail' job.id %}">{{ job.title }}</a>
+        - <a href="{% url 'apply_for_job' job.id %}">Apply</a>
+        - <a href="{% url 'add_to_favorites' job.id %}">Add to Favorites</a>
+      </li>
+    {% empty %}
+      <li>No jobs available at the moment.</li>
+    {% endfor %}
+  </ul>
+{% endblock %}
