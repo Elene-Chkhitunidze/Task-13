@@ -1,0 +1,16 @@
+{% extends 'base_generic.html' %}
+
+{% block content %}
+  <h1>Apply for {{ job.title }}</h1>
+
+  {% if error %}
+      <p style="color:red;">{{ error }}</p>
+  {% endif %}
+
+  <form method="POST">
+    {% csrf_token %}
+    <label for="cover_letter">Cover Letter:</label><br>
+    <textarea name="cover_letter" rows="5" cols="40" placeholder="Cover letter"></textarea><br><br>
+    <button type="submit">Submit Application</button>
+  </form>
+{% endblock %}

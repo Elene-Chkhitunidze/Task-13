@@ -1,0 +1,16 @@
+{% extends 'base_generic.html' %}
+
+{% block title %}Your Favorite Jobs{% endblock %}
+
+{% block content %}
+  <h1>Your Favorite Jobs</h1>
+  <ul>
+    {% for favorite in favorites %}
+      <li>
+        <a href="{% url 'job_detail' favorite.job.id %}">{{ favorite.job.title }}</a>
+      </li>
+    {% empty %}
+      <li>You have no favorite jobs yet.</li>
+    {% endfor %}
+  </ul>
+{% endblock %}
