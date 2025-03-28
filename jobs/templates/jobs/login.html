@@ -109,13 +109,13 @@
     <h2 class="login-title">Authorization</h2>
 
     {% if messages %}
-        <div class="alert-container">
-            {% for message in messages %}
-                <div class="alert alert-{{ message.tags }}" style="color: red;">
-                    {{ message }}
-                </div>
-            {% endfor %}
+    <div class="alert-container">
+        {% for message in messages %}
+        <div class="alert alert-{{ message.tags }}" style="color: red;">
+            {{ message }}
         </div>
+        {% endfor %}
+    </div>
     {% endif %}
 
     <form method="POST" class="login-form" novalidate>
@@ -123,14 +123,14 @@
         <div class="form-group">
             <p>Email: {{ form.username }}
                 {% for error in form.username.errors %}
-                    <span class="error-message">{{ error }}</span>
+                <span class="error-message">{{ error }}</span>
                 {% endfor %}
             </p>
         </div>
         <div class="form-group">
             <p>{{ form.password.label_tag }} {{ form.password }}
                 {% for error in form.password.errors %}
-                    <span class="error-message">{{ error }}</span>
+                <span class="error-message">{{ error }}</span>
                 {% endfor %}
             </p>
         </div>

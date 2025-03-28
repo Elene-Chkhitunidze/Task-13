@@ -87,32 +87,32 @@
     </style>
 </head>
 <body>
-    <div class="container">
-        {% if messages %}
-            <div class="messages">
-                {% for message in messages %}
-                    <div class="message {% if message.tags %}{{ message.tags }}{% endif %}">
-                        {{ message }}
-                    </div>
-                {% endfor %}
-            </div>
-        {% endif %}
-
-        <h1>{{ vacancy.title }}</h1>
-        <p>{{ vacancy.description|linebreaks }}</p>
-
-        <!-- Job Application Form -->
-        <form method="post" enctype="multipart/form-data">
-            {% csrf_token %}
-            <div class="form-group">
-                <label for="resume">Upload Your Resume</label>
-                <input type="file" name="resume" id="resume" class="form-control" accept=".pdf,.doc,.docx">
-            </div>
-            <div class="button-container">
-                <button type="submit">Send Application</button>
-                <a href="{% url 'job_seeker_profile' %}" class="back-button">← Back</a>
-            </div>
-        </form>
+<div class="container">
+    {% if messages %}
+    <div class="messages">
+        {% for message in messages %}
+        <div class="message {% if message.tags %}{{ message.tags }}{% endif %}">
+            {{ message }}
+        </div>
+        {% endfor %}
     </div>
+    {% endif %}
+
+    <h1>{{ vacancy.title }}</h1>
+    <p>{{ vacancy.description|linebreaks }}</p>
+
+
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="resume">Upload Your Resume</label>
+            <input type="file" name="resume" id="resume" class="form-control" accept=".pdf,.doc,.docx">
+        </div>
+        <div class="button-container">
+            <button type="submit">Send Application</button>
+            <a href="{% url 'job_seeker_profile' %}" class="back-button">← Back</a>
+        </div>
+    </form>
+</div>
 </body>
 </html>

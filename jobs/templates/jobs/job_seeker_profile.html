@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CareerLink - Job Seeker Profile</title>
     <style>
-        /* Basic reset and box-sizing for consistency */
+
         * {
             margin: 0;
             padding: 0;
@@ -145,11 +145,11 @@
 <body>
 
 <div class="container">
-    <!-- Header with CareerLink name and logout button on the same line -->
+
     <h1>CareerLink</h1>
     <a href="{% url 'logout' %}" class="logout-button">Logout</a>
 
-    <!-- Search Form -->
+
     <div class="search-container">
         <form method="GET" action="" style="display: flex; gap: 10px;">
             <input type="text" name="search_company" placeholder="Search by Company" value="{{ search_company }}">
@@ -160,20 +160,20 @@
 
     <h2>Job Vacancies</h2>
 
-    <!-- List of Vacancies -->
+
     <ul class="vacancies-list">
         {% for vacancy in vacancies %}
-            <li>
-                <a href="{% url 'vacancy_detail_job_seeker' vacancy.id %}">
-                    {{ vacancy.title }} at {{ vacancy.company }}
-                </a>
-            </li>
+        <li>
+            <a href="{% url 'vacancy_detail_job_seeker' vacancy.id %}">
+                {{ vacancy.title }} at {{ vacancy.company }}
+            </a>
+        </li>
         {% empty %}
-            <p>No job vacancies found.</p>
+        <p>No job vacancies found.</p>
         {% endfor %}
     </ul>
 
-    <!-- Pagination Links -->
+
     <div class="pagination">
         <span class="step-links">
             {% if vacancies.has_previous %}

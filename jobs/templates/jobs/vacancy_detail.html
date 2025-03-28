@@ -3,125 +3,123 @@
 {% block title %}Vacancy Details{% endblock %}
 
 {% block content %}
-    <style>
-        /* Body styling with gradient background */
-        body {
-            background: linear-gradient(135deg, #ece9e6, #ffffff);
-            font-family: 'Helvetica Neue', sans-serif;
-            margin: 0;
-            padding: 0;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+<style>
 
-        /* Hiding navigation */
-        nav {
-            display: none;
-        }
-
-        .vacancy-detail-container {
-            max-width: 1000px;
-            margin: 50px auto;
-            padding: 20px;
-            background: #ffffff;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-            text-align: left;
-        }
-
-        .vacancy-detail-container h2 {
-            font-size: 24px;
-            font-weight: bold;
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .detail-row {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 0;
-            border-bottom: 1px solid #ddd;
-        }
-
-        .detail-row strong {
-            flex: 1;
-            color: #333;
-        }
-
-        .detail-row span {
-            flex: 2;
-            color: #555;
-            text-align: left;
-        }
-
-        .description {
-            margin-top: 10px;
-        }
-
-        .btn-container {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            margin-top: 20px;
-        }
-
-        .btn {
-            padding: 10px 20px;
-            border: none;
-            cursor: pointer;
-            border-radius: 5px;
-            text-decoration: none;
-            display: inline-block;
-        }
-
-        .btn-edit {
-            background: #007bff;
-            color: white;
-        }
-
-        .btn-edit:hover {
-            background: #0056b3;
-        }
-
-        .btn-delete {
-            background: red;
-            color: white;
-        }
-
-        .btn-delete:hover {
-            background: darkred;
-        }
-
-        .btn-secondary {
-            background: #6c757d;
-            color: white;
-        }
-
-        .btn-secondary:hover {
-            background: #5a6268;
-        }
-    </style>
-
-    <div class="vacancy-detail-container">
-        <h2>{{ vacancy.title }}</h2>
-
-        <div class="description">
-            <strong>Description:</strong> <br>
-            <span>{{ vacancy.description|linebreaks }}</span>
-        </div>
-
-        <!-- Buttons -->
-      <div class="btn-container">
-            <a href="{% url 'edit_vacancy' vacancy.id %}" class="btn btn-edit">Edit</a>
-            <a href="{% url 'delete_vacancy' vacancy.id %}" class="btn btn-delete">Delete</a>
-            <a href="{% url 'employer_profile_view' %}" class="btn btn-secondary">← Back</a>
-        </div>
+    body {
+        background: linear-gradient(135deg, #ece9e6, #ffffff);
+        font-family: 'Helvetica Neue', sans-serif;
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
 
+    nav {
+        display: none;
+    }
 
+    .vacancy-detail-container {
+        max-width: 1000px;
+        margin: 50px auto;
+        padding: 20px;
+        background: #ffffff;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        text-align: left;
+    }
 
+    .vacancy-detail-container h2 {
+        font-size: 24px;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .detail-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 0;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .detail-row strong {
+        flex: 1;
+        color: #333;
+    }
+
+    .detail-row span {
+        flex: 2;
+        color: #555;
+        text-align: left;
+    }
+
+    .description {
+        margin-top: 10px;
+    }
+
+    .btn-container {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 20px;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        text-decoration: none;
+        display: inline-block;
+    }
+
+    .btn-edit {
+        background: #007bff;
+        color: white;
+    }
+
+    .btn-edit:hover {
+        background: #0056b3;
+    }
+
+    .btn-delete {
+        background: red;
+        color: white;
+    }
+
+    .btn-delete:hover {
+        background: darkred;
+    }
+
+    .btn-secondary {
+        background: #6c757d;
+        color: white;
+    }
+
+    .btn-secondary:hover {
+        background: #5a6268;
+    }
+</style>
+
+<div class="vacancy-detail-container">
+    <h2>{{ vacancy.title }}</h2>
+
+    <div class="description">
+        <strong>Description:</strong> <br>
+        <span>{{ vacancy.description|linebreaks }}</span>
     </div>
+
+
+    <div class="btn-container">
+        <a href="{% url 'edit_vacancy' vacancy.id %}" class="btn btn-edit">Edit</a>
+        <a href="{% url 'delete_vacancy' vacancy.id %}" class="btn btn-delete">Delete</a>
+        <a href="{% url 'employer_profile_view' %}" class="btn btn-secondary">← Back</a>
+    </div>
+
+
+</div>
 {% endblock %}

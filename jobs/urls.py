@@ -8,7 +8,6 @@ urlpatterns = [
                   path('', views.home, name='home'),
                   path('login/', views.login_view, name='login'),
                   path('register/', views.register, name='register'),
-                  # 🔹 Add the missing employer profile URL
                   path('employer-profile/', views.employer_profile, name='employer_profile'),
                   path('add-vacancy/', views.add_vacancy, name='add_vacancy'),
                   path('edit-vacancy/<int:vacancy_id>/', views.edit_vacancy, name='edit_vacancy'),
