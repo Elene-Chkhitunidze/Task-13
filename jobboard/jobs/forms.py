@@ -1,11 +1,13 @@
 from django import forms
 from django.contrib.auth.forms import UserCreationForm
-from .models import CustomUser, Job
+from .models import CustomUser
 from django.utils import timezone
 from django.core.exceptions import ValidationError
 from django.utils.translation import gettext_lazy as _
 from .models import EmployerProfile, Vacancy
 from django.contrib.auth.models import User
+from .models import JobSeekerProfile
+from django.contrib.auth import get_user_model
 
 class CustomUserCreationForm(UserCreationForm):
     class Meta:
@@ -72,6 +74,81 @@ class CustomUserCreationForm(UserCreationForm):
         return user_type
 
 
+class PasswordResetForm(forms.Form):
+    email = forms.EmailField(
+        label=_("Email"),
+        widget=forms.EmailInput(attrs={'class': 'form-control'}),
+        error_messages={
+            'required': _('Email is required'),
+            'invalid': _('Enter a valid email address')
+        }
+    )
+    new_password = forms.CharField(
+        label=_("New Password"),
+        widget=forms.PasswordInput(attrs={'class': 'form-control'}),
+        error_messages={
+            'required': _('New password is required')
+        }
+    )
+    confirm_password = forms.CharField(
+        label=_("Confirm Password"),
+        widget=forms.PasswordInput(attrs={'class': 'form-control'}),
+        error_messages={
+            'required': _('Confirmation password is required')
+        }
+    )
+
+    def clean_email(self):
+        email = self.cleaned_data.get('email')
+        User = get_user_model()
+
+        # Validate email format
+        if not email:
+            raise ValidationError(_('Email is required'))
+
+        # Check if email exists
+        try:
+            User.objects.get(email=email)
+        except User.DoesNotExist:
+            raise ValidationError(_('This email address is not registered. Please check and try again!'))
+
+        return email
+
+    def clean_new_password(self):
+        password = self.cleaned_data.get('new_password')
+
+        # Validate password length
+        if len(password) < 8:
+            raise ValidationError(_('Password must be at least 8 characters long'))
+
+        # Check for at least one digit
+        if not any(char.isdigit() for char in password):
+            raise ValidationError(_('Password must contain at least one digit'))
+
+        # Check for at least one uppercase letter
+        if not any(char.isupper() for char in password):
+            raise ValidationError(_('Password must contain at least one uppercase letter'))
+
+        return password
+
+    def clean(self):
+        cleaned_data = super().clean()
+        new_password = cleaned_data.get('new_password')
+        confirm_password = cleaned_data.get('confirm_password')
+
+        # Explicitly print out passwords for debugging
+        print("New Password:", new_password)
+        print("Confirm Password:", confirm_password)
+
+        # Check if passwords match only if both fields have values
+        if new_password and confirm_password and new_password != confirm_password:
+            # Raise an error specifically for password mismatch
+            raise ValidationError({
+                'confirm_password': _('Passwords do not match. Please try again!')
+            })
+
+        return cleaned_data
+
 class EmployerProfileForm(forms.ModelForm):
     class Meta:
         model = EmployerProfile
@@ -95,13 +172,13 @@ class VacancyForm(forms.ModelForm):
     title = forms.CharField(max_length=255, required=True)  # Ensure it's mandatory
     description = forms.CharField(widget=forms.Textarea, required=True)  # Ensure it's mandatory
 
-class JobForm(forms.ModelForm):
-    class Meta:
-        model = Job
-        fields = ['title', 'description', 'location', 'deadline', 'status']
+class JobSearchForm(forms.Form):
+    title = forms.CharField(required=False, label="Search by Title")
+    company = forms.CharField(required=False, label="Search by Company")
 
-    def clean_deadline(self):
-        deadline = self.cleaned_data.get('deadline')
-        if deadline and deadline < timezone.now():
-            raise forms.ValidationError(_("Deadline cannot be in the past!"))
-        return deadline
+class JobApplicationForm(forms.Form):
+    cover_letter = forms.CharField(
+        widget=forms.Textarea,
+        required=False,
+        label="Cover Letter (Optional)"
+    )

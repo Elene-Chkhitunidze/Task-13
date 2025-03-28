@@ -1,7 +1,7 @@
 from django.contrib.auth.models import AbstractUser
 from django.db import models
 from django.utils import timezone
-
+from django.conf import settings
 
 class CustomUser(AbstractUser):
     USER_TYPE_CHOICES = (
@@ -54,45 +54,15 @@ class Vacancy(models.Model):
     company = models.CharField(max_length=255)
     title = models.CharField(max_length=255)
     description = models.TextField()
-
-
-    def __str__(self):
-        return self.title
-
-
-# Job Model
-class Job(models.Model):
-    title = models.CharField(max_length=200)
-    description = models.TextField()
-    location = models.CharField(max_length=100)
-    created_at = models.DateTimeField(auto_now_add=True)
-    deadline = models.DateField(default=timezone.now)
-    status = models.CharField(max_length=50)  # Make sure this field exists
+    contact_email = models.EmailField(null=True, blank=True)  # Optional explicit email field
 
     def __str__(self):
         return self.title
 
-
-# Job Application Model
-class JobApplication(models.Model):
-    job = models.ForeignKey(Job, on_delete=models.CASCADE, related_name='applications')
-    applicant = models.ForeignKey(
-        CustomUser, on_delete=models.CASCADE, limit_choices_to={'user_type': 'job_seeker'}, related_name='job_applications'
-    )
-    cover_letter = models.TextField()
-    applied_at = models.DateTimeField(auto_now_add=True)
+class JobSeekerProfile(models.Model):
+    user = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    resume = models.FileField(upload_to='resumes/', blank=True, null=True)
 
     def __str__(self):
-        return f"{self.applicant.username} - {self.job.title}"
+        return f"{self.user.username}'s Profile"
 
-
-# Favorite Jobs Model
-class FavoriteJob(models.Model):
-    user = models.ForeignKey(
-        CustomUser, on_delete=models.CASCADE, limit_choices_to={'user_type': 'job_seeker'}, related_name='favorite_jobs'
-    )
-    job = models.ForeignKey(Job, on_delete=models.CASCADE, related_name='favorited_by')
-    added_at = models.DateTimeField(auto_now_add=True)
-
-    def __str__(self):
-        return f"{self.user.username} - {self.job.title}"
