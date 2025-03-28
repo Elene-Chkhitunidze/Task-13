@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareerLink - Job Seeker Profile</title>
+    <style>
+        /* Basic reset and box-sizing for consistency */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .logout-button {
+            float: right;
+            padding: 10px 15px;
+            background-color: red;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .logout-button:hover {
+            background-color: #c0392b;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        .search-container {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px; /* Space between elements */
+        }
+
+        .search-container input {
+            padding: 10px;
+            font-size: 1rem;
+            flex: 1; /* Allows inputs to take equal space */
+            min-width: 200px; /* Ensures fields are not too small */
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .search-container button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            white-space: nowrap; /* Prevent button text from wrapping */
+            flex-shrink: 0; /* Prevent button from shrinking */
+        }
+
+        .search-container button:hover {
+            background-color: #2980b9;
+        }
+
+        .vacancies-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .vacancies-list li {
+            padding: 10px;
+            background-color: #ecf0f1;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: background-color 0.3s;
+        }
+
+        .vacancies-list li:hover {
+            background-color: #bdc3c7;
+        }
+
+        .vacancies-list a {
+            color: #2c3e50;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .vacancies-list a:hover {
+            text-decoration: underline;
+        }
+
+        .pagination {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .pagination a {
+            padding: 8px 16px;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 0 5px;
+        }
+
+        .pagination a:hover {
+            background-color: #2980b9;
+        }
+
+        .pagination .current {
+            padding: 8px 16px;
+            background-color: #95a5a6;
+            color: white;
+            border-radius: 5px;
+            margin: 0 5px;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Header with CareerLink name and logout button on the same line -->
+    <h1>CareerLink</h1>
+    <a href="{% url 'logout' %}" class="logout-button">Logout</a>
+
+    <!-- Search Form -->
+    <div class="search-container">
+        <form method="GET" action="" style="display: flex; gap: 10px;">
+            <input type="text" name="search_company" placeholder="Search by Company" value="{{ search_company }}">
+            <input type="text" name="search_title" placeholder="Search by Position" value="{{ search_title }}">
+            <button type="submit">Search</button>
+        </form>
+    </div>
+
+    <h2>Job Vacancies</h2>
+
+    <!-- List of Vacancies -->
+    <ul class="vacancies-list">
+        {% for vacancy in vacancies %}
+            <li>
+                <a href="{% url 'vacancy_detail_job_seeker' vacancy.id %}">
+                    {{ vacancy.title }} at {{ vacancy.company }}
+                </a>
+            </li>
+        {% empty %}
+            <p>No job vacancies found.</p>
+        {% endfor %}
+    </ul>
+
+    <!-- Pagination Links -->
+    <div class="pagination">
+        <span class="step-links">
+            {% if vacancies.has_previous %}
+                <a href="?page=1">« first</a>
+                <a href="?page={{ vacancies.previous_page_number }}">previous</a>
+            {% endif %}
+
+            <span class="current">
+                Page {{ vacancies.number }} of {{ vacancies.paginator.num_pages }}
+            </span>
+
+            {% if vacancies.has_next %}
+                <a href="?page={{ vacancies.next_page_number }}">next</a>
+                <a href="?page={{ vacancies.paginator.num_pages }}">last »</a>
+            {% endif %}
+        </span>
+    </div>
+</div>
+
+</body>
+</html>

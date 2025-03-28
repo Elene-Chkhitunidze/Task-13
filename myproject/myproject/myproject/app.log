@@ -1,0 +1,961 @@
+2025-02-26 19:49:36,088 INFO Watching for file changes with StatReloader
+2025-02-26 19:52:42,497 INFO "GET / HTTP/1.1" 200 963
+2025-02-26 19:52:43,955 WARNING Not Found: /favicon.ico
+2025-02-26 19:52:43,959 WARNING "GET /favicon.ico HTTP/1.1" 404 4050
+2025-02-26 19:52:50,415 INFO "GET /?q=count HTTP/1.1" 200 784
+2025-02-26 19:52:58,495 INFO "GET /?q=adv HTTP/1.1" 200 966
+2025-02-26 19:52:59,850 INFO "GET /books/2/ HTTP/1.1" 200 1683
+2025-02-26 19:53:02,609 INFO "GET / HTTP/1.1" 200 963
+2025-02-26 19:54:01,336 WARNING Not Found: /books/1/update/
+2025-02-26 19:54:01,337 WARNING "GET /books/1/update/ HTTP/1.1" 404 4062
+2025-02-26 19:55:43,926 INFO C:\Users\Elene\PycharmProjects\pythonProject\myproject\books\urls.py changed, reloading.
+2025-02-26 19:55:52,396 INFO Watching for file changes with StatReloader
+2025-02-26 19:57:06,833 INFO Watching for file changes with StatReloader
+2025-02-26 19:57:25,293 INFO "GET / HTTP/1.1" 200 963
+2025-02-26 19:57:30,383 WARNING Not Found: /books/1/update/
+2025-02-26 19:57:30,387 WARNING "GET /books/1/update/ HTTP/1.1" 404 4519
+2025-02-26 19:57:39,802 INFO "GET /admin/ HTTP/1.1" 200 8905
+2025-02-26 19:57:39,938 INFO "GET /static/admin/css/base.css HTTP/1.1" 304 0
+2025-02-26 19:57:39,985 INFO "GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+2025-02-26 19:57:40,014 INFO "GET /static/admin/js/theme.js HTTP/1.1" 304 0
+2025-02-26 19:57:40,443 INFO "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+2025-02-26 19:57:40,619 INFO "GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+2025-02-26 19:57:40,687 INFO "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+2025-02-26 19:57:40,694 INFO "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+2025-02-26 19:57:40,730 INFO "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+2025-02-26 19:57:40,730 INFO "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+2025-02-26 19:57:40,732 INFO "GET /static/admin/img/icon-deletelink.svg HTTP/1.1" 304 0
+2025-02-26 19:57:44,910 WARNING Not Found: /update
+2025-02-26 19:57:44,911 WARNING "GET /update HTTP/1.1" 404 4321
+2025-02-26 19:58:14,232 WARNING Not Found: /books/1/update/
+2025-02-26 19:58:14,233 WARNING "GET /books/1/update/ HTTP/1.1" 404 4519
+2025-02-26 20:01:25,409 INFO Watching for file changes with StatReloader
+2025-02-26 20:01:53,348 INFO "GET / HTTP/1.1" 200 963
+2025-02-26 20:02:35,114 INFO "GET /books/2/update/ HTTP/1.1" 200 1954
+2025-02-26 20:02:46,700 INFO "POST /books/2/update/ HTTP/1.1" 302 0
+2025-02-26 20:02:46,719 INFO "GET / HTTP/1.1" 200 963
+2025-02-26 20:06:23,289 INFO Watching for file changes with StatReloader
+2025-02-26 20:06:26,856 INFO "GET / HTTP/1.1" 200 1200
+2025-02-26 20:06:37,735 INFO "GET /books/2/update/ HTTP/1.1" 200 1954
+2025-02-26 20:06:43,634 INFO "POST /books/2/update/ HTTP/1.1" 302 0
+2025-02-26 20:06:43,663 INFO "GET / HTTP/1.1" 200 1200
+2025-02-26 20:06:46,877 INFO "GET /books/2/ HTTP/1.1" 200 1683
+2025-02-26 20:06:49,240 INFO "GET / HTTP/1.1" 200 1200
+2025-02-26 20:06:54,937 INFO "GET /add/ HTTP/1.1" 200 2063
+2025-02-26 20:08:02,370 INFO "POST /add/ HTTP/1.1" 302 0
+2025-02-26 20:08:02,449 INFO "GET / HTTP/1.1" 200 1676
+2025-02-26 20:08:04,894 INFO "GET /books/6/update/ HTTP/1.1" 200 1670
+2025-02-26 20:08:10,703 INFO "POST /books/6/update/ HTTP/1.1" 302 0
+2025-02-26 20:08:10,738 INFO "GET / HTTP/1.1" 200 1675
+2025-02-26 20:08:15,669 INFO "GET /books/6/ HTTP/1.1" 200 1396
+2025-03-03 23:20:18,545 INFO Watching for file changes with StatReloader
+2025-03-03 23:20:20,280 INFO "GET / HTTP/1.1" 200 1634
+2025-03-03 23:20:34,327 INFO "GET /add/ HTTP/1.1" 200 2365
+2025-03-03 23:21:47,262 INFO "POST /add/ HTTP/1.1" 302 0
+2025-03-03 23:21:47,283 INFO "GET / HTTP/1.1" 200 2286
+2025-03-03 23:21:47,479 INFO "GET /media/book_covers/cover.jpg HTTP/1.1" 200 144278
+2025-03-05 17:46:20,840 INFO Watching for file changes with StatReloader
+2025-03-05 17:46:23,184 INFO "GET / HTTP/1.1" 200 2286
+2025-03-05 17:46:23,339 INFO "GET /media/book_covers/cover.jpg HTTP/1.1" 304 0
+2025-03-05 17:46:23,455 WARNING Not Found: /favicon.ico
+2025-03-05 17:46:23,455 WARNING "GET /favicon.ico HTTP/1.1" 404 5413
+2025-03-05 17:46:29,095 INFO "GET /books/2/ HTTP/1.1" 200 2012
+2025-03-05 17:46:33,406 ERROR Internal Server Error: /buy/2/
+Traceback (most recent call last):
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\myproject\myproject\books\views.py", line 113, in buy_book
+    send_order_email(request.user, book)
+  File "C:\Users\Elene\PycharmProjects\pythonProject\myproject\myproject\books\views.py", line 107, in send_order_email
+    send_mail(subject, message, 'your_email@gmail.com', [user.email])
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\core\mail\__init__.py", line 88, in send_mail
+    return mail.send()
+           ^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\core\mail\message.py", line 301, in send
+    return self.get_connection(fail_silently).send_messages([self])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\core\mail\backends\smtp.py", line 128, in send_messages
+    new_conn_created = self.open()
+                       ^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\core\mail\backends\smtp.py", line 95, in open
+    self.connection.login(self.username, self.password)
+  File "C:\Users\Elene\AppData\Local\Programs\Python\Python312\Lib\smtplib.py", line 750, in login
+    raise last_exception
+  File "C:\Users\Elene\AppData\Local\Programs\Python\Python312\Lib\smtplib.py", line 739, in login
+    (code, resp) = self.auth(
+                   ^^^^^^^^^^
+  File "C:\Users\Elene\AppData\Local\Programs\Python\Python312\Lib\smtplib.py", line 662, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials a640c23a62f3a-abf3f3bbfb3sm889632866b.77 - gsmtp')
+2025-03-05 17:46:33,422 ERROR "POST /buy/2/ HTTP/1.1" 500 112579
+2025-03-05 17:47:43,396 INFO C:\Users\Elene\PycharmProjects\pythonProject\myproject\myproject\myproject\settings.py changed, reloading.
+2025-03-05 17:47:58,753 INFO Watching for file changes with StatReloader
+2025-03-05 17:48:03,075 INFO "GET / HTTP/1.1" 200 2286
+2025-03-05 17:48:06,692 INFO "GET /books/7/ HTTP/1.1" 200 2203
+2025-03-05 17:48:11,108 ERROR Internal Server Error: /buy/7/
+Traceback (most recent call last):
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\myproject\myproject\books\views.py", line 113, in buy_book
+    send_order_email(request.user, book)
+  File "C:\Users\Elene\PycharmProjects\pythonProject\myproject\myproject\books\views.py", line 107, in send_order_email
+    send_mail(subject, message, 'your_email@gmail.com', [user.email])
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\core\mail\__init__.py", line 88, in send_mail
+    return mail.send()
+           ^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\core\mail\message.py", line 301, in send
+    return self.get_connection(fail_silently).send_messages([self])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\core\mail\backends\smtp.py", line 128, in send_messages
+    new_conn_created = self.open()
+                       ^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\core\mail\backends\smtp.py", line 95, in open
+    self.connection.login(self.username, self.password)
+  File "C:\Users\Elene\AppData\Local\Programs\Python\Python312\Lib\smtplib.py", line 750, in login
+    raise last_exception
+  File "C:\Users\Elene\AppData\Local\Programs\Python\Python312\Lib\smtplib.py", line 739, in login
+    (code, resp) = self.auth(
+                   ^^^^^^^^^^
+  File "C:\Users\Elene\AppData\Local\Programs\Python\Python312\Lib\smtplib.py", line 662, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials a640c23a62f3a-abf600c58c1sm692516066b.127 - gsmtp')
+2025-03-05 17:48:11,108 ERROR "POST /buy/7/ HTTP/1.1" 500 112534
+2025-03-05 18:05:41,338 INFO C:\Users\Elene\PycharmProjects\pythonProject\myproject\myproject\myproject\settings.py changed, reloading.
+2025-03-05 18:05:42,655 INFO Watching for file changes with StatReloader
+2025-03-05 18:14:24,113 INFO C:\Users\Elene\PycharmProjects\pythonProject\myproject\myproject\myproject\settings.py changed, reloading.
+2025-03-05 18:14:37,616 INFO Watching for file changes with StatReloader
+2025-03-05 18:14:39,050 INFO "GET / HTTP/1.1" 200 2286
+2025-03-05 18:14:43,704 INFO "GET /books/2/ HTTP/1.1" 200 2012
+2025-03-05 18:14:47,593 INFO "POST /buy/2/ HTTP/1.1" 302 0
+2025-03-05 18:14:47,596 INFO "GET / HTTP/1.1" 200 2286
+2025-03-05 18:16:09,645 INFO "GET /admin/ HTTP/1.1" 200 8905
+2025-03-05 18:16:09,705 INFO "GET /static/admin/css/base.css HTTP/1.1" 304 0
+2025-03-05 18:16:09,705 INFO "GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+2025-03-05 18:16:09,707 INFO "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+2025-03-05 18:16:09,713 INFO "GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+2025-03-05 18:16:09,714 INFO "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+2025-03-05 18:16:09,715 INFO "GET /static/admin/js/theme.js HTTP/1.1" 304 0
+2025-03-05 18:16:09,717 INFO "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+2025-03-05 18:16:09,833 INFO "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+2025-03-05 18:16:09,843 INFO "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+2025-03-05 18:16:09,844 INFO "GET /static/admin/img/icon-deletelink.svg HTTP/1.1" 304 0
+2025-03-05 18:16:19,880 INFO "GET /admin/login HTTP/1.1" 301 0
+2025-03-05 18:16:19,896 INFO "GET /admin/login/ HTTP/1.1" 302 0
+2025-03-05 18:16:19,909 INFO "GET /admin/ HTTP/1.1" 200 8905
+2025-03-05 18:16:23,599 INFO "GET /admin/login HTTP/1.1" 301 0
+2025-03-05 18:16:23,618 INFO "GET /admin/login/ HTTP/1.1" 302 0
+2025-03-05 18:16:23,641 INFO "GET /admin/ HTTP/1.1" 200 8905
+2025-03-05 18:16:29,195 WARNING Not Found: /admin/register
+2025-03-05 18:16:29,196 WARNING "GET /admin/register HTTP/1.1" 404 5928
+2025-03-05 18:16:49,805 INFO "GET /login/ HTTP/1.1" 200 578
+2025-03-05 18:17:50,335 WARNING Not Found: /change-password/
+2025-03-05 18:17:50,336 WARNING "GET /change-password/ HTTP/1.1" 404 5428
+2025-03-05 18:23:05,753 INFO "GET /change_password/ HTTP/1.1" 200 1383
+2025-03-05 18:23:30,351 INFO "POST /change_password/ HTTP/1.1" 200 1629
+2025-03-05 18:25:23,224 INFO Watching for file changes with StatReloader
+2025-03-05 18:25:24,793 INFO "GET / HTTP/1.1" 200 2286
+2025-03-05 18:25:33,510 INFO "GET /login/ HTTP/1.1" 200 638
+2025-03-05 18:25:37,197 INFO "GET /reset_password/ HTTP/1.1" 200 405
+2025-03-05 18:25:41,019 ERROR Internal Server Error: /reset_password/
+Traceback (most recent call last):
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\myproject\myproject\books\views.py", line 133, in reset_password
+    form.save(request=request, from_email='your_email@gmail.com')
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\contrib\auth\forms.py", line 494, in save
+    self.send_mail(
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\contrib\auth\forms.py", line 423, in send_mail
+    body = loader.render_to_string(email_template_name, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\template\defaulttags.py", line 55, in render
+    output = self.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\template\loader_tags.py", line 56, in render
+    result = self.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'password_reset_confirm' not found. 'password_reset_confirm' is not a valid view function or pattern name.
+2025-03-05 18:25:41,026 ERROR "POST /reset_password/ HTTP/1.1" 500 156915
+2025-03-05 18:30:49,807 ERROR Internal Server Error: /reset_password/
+Traceback (most recent call last):
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\myproject\myproject\books\views.py", line 133, in reset_password
+    form.save(request=request, from_email='your_email@gmail.com')
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\contrib\auth\forms.py", line 494, in save
+    self.send_mail(
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\contrib\auth\forms.py", line 423, in send_mail
+    body = loader.render_to_string(email_template_name, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\template\defaulttags.py", line 55, in render
+    output = self.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\template\loader_tags.py", line 56, in render
+    result = self.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'password_reset_confirm' not found. 'password_reset_confirm' is not a valid view function or pattern name.
+2025-03-05 18:30:49,807 ERROR "POST /reset_password/ HTTP/1.1" 500 156915
+2025-03-05 18:31:41,847 INFO C:\Users\Elene\PycharmProjects\pythonProject\myproject\myproject\books\urls.py changed, reloading.
+2025-03-05 18:31:42,878 INFO Watching for file changes with StatReloader
+2025-03-05 18:32:01,374 INFO C:\Users\Elene\PycharmProjects\pythonProject\myproject\myproject\books\urls.py changed, reloading.
+2025-03-05 18:32:01,987 INFO Watching for file changes with StatReloader
+2025-03-05 18:35:16,103 INFO Watching for file changes with StatReloader
+2025-03-05 18:35:17,587 INFO "GET / HTTP/1.1" 200 2286
+2025-03-05 18:35:22,820 ERROR Internal Server Error: /login/
+Traceback (most recent call last):
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\myproject\myproject\books\views.py", line 65, in login_
+    return render(request, 'books/login.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'reset_password' not found. 'reset_password' is not a valid view function or pattern name.
+2025-03-05 18:35:22,820 ERROR "GET /login/ HTTP/1.1" 500 115845
+2025-03-05 18:35:23,142 ERROR Internal Server Error: /login/
+Traceback (most recent call last):
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\myproject\myproject\books\views.py", line 65, in login_
+    return render(request, 'books/login.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'reset_password' not found. 'reset_password' is not a valid view function or pattern name.
+2025-03-05 18:35:23,144 ERROR "GET /login/ HTTP/1.1" 500 115571
+2025-03-05 18:38:49,769 INFO C:\Users\Elene\PycharmProjects\pythonProject\myproject\myproject\books\views.py changed, reloading.
+2025-03-05 18:38:50,621 INFO Watching for file changes with StatReloader
+2025-03-05 18:39:12,226 INFO C:\Users\Elene\PycharmProjects\pythonProject\myproject\myproject\books\views.py changed, reloading.
+2025-03-05 18:39:13,142 INFO Watching for file changes with StatReloader
+2025-03-05 18:39:50,239 INFO C:\Users\Elene\PycharmProjects\pythonProject\myproject\myproject\books\urls.py changed, reloading.
+2025-03-05 18:39:50,897 INFO Watching for file changes with StatReloader
+2025-03-05 18:41:09,607 INFO C:\Users\Elene\PycharmProjects\pythonProject\myproject\myproject\myproject\settings.py changed, reloading.
+2025-03-05 18:41:10,195 INFO Watching for file changes with StatReloader
+2025-03-05 18:41:50,545 INFO Watching for file changes with StatReloader
+2025-03-05 18:41:52,045 INFO "GET / HTTP/1.1" 200 2286
+2025-03-05 18:41:54,435 INFO "GET /books/6/ HTTP/1.1" 200 1725
+2025-03-05 18:41:57,610 INFO "POST /buy/6/ HTTP/1.1" 302 0
+2025-03-05 18:41:57,626 INFO "GET / HTTP/1.1" 200 2286
+2025-03-05 18:42:40,979 ERROR Internal Server Error: /login/
+Traceback (most recent call last):
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\myproject\myproject\books\views.py", line 66, in login_
+    return render(request, 'books/login.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'reset_password' not found. 'reset_password' is not a valid view function or pattern name.
+2025-03-05 18:42:40,997 ERROR "GET /login/ HTTP/1.1" 500 115853
+2025-03-05 18:42:41,443 ERROR Internal Server Error: /login/
+Traceback (most recent call last):
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\myproject\myproject\books\views.py", line 66, in login_
+    return render(request, 'books/login.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'reset_password' not found. 'reset_password' is not a valid view function or pattern name.
+2025-03-05 18:42:41,443 ERROR "GET /login/ HTTP/1.1" 500 115579
+2025-03-05 18:46:07,764 INFO C:\Users\Elene\PycharmProjects\pythonProject\myproject\myproject\books\urls.py changed, reloading.
+2025-03-05 18:46:08,691 INFO Watching for file changes with StatReloader
+2025-03-05 18:46:22,390 INFO Watching for file changes with StatReloader
+2025-03-05 18:46:24,296 INFO "GET / HTTP/1.1" 200 2286
+2025-03-05 18:46:29,768 INFO "GET /login/ HTTP/1.1" 200 638
+2025-03-05 18:46:35,339 INFO "GET /reset_password/ HTTP/1.1" 200 3417
+2025-03-05 18:46:35,616 INFO "GET /static/admin/css/forms.css HTTP/1.1" 200 8794
+2025-03-05 18:46:35,637 INFO "GET /static/admin/css/widgets.css HTTP/1.1" 200 11564
+2025-03-05 18:46:43,347 INFO "POST /reset_password/ HTTP/1.1" 302 0
+2025-03-05 18:46:43,387 INFO "GET /password_reset/done/ HTTP/1.1" 200 2987
+2025-03-05 18:47:01,704 INFO "GET /reset/MQ/cm7g5t-b326c7c463b52ac21e514f60aca297ca/ HTTP/1.1" 302 0
+2025-03-05 18:47:01,784 INFO "GET /reset/MQ/set-password/ HTTP/1.1" 200 3874
+2025-03-05 18:47:18,783 INFO "POST /reset/MQ/set-password/ HTTP/1.1" 302 0
+2025-03-05 18:47:18,812 INFO "GET /reset/done/ HTTP/1.1" 200 2825
+2025-03-05 18:47:21,588 WARNING Not Found: /accounts/login/
+2025-03-05 18:47:21,589 WARNING "GET /accounts/login/ HTTP/1.1" 404 6281
+2025-03-05 18:48:51,249 INFO "GET /login/ HTTP/1.1" 200 638
+2025-03-05 18:49:49,021 INFO Watching for file changes with StatReloader
+2025-03-05 18:49:50,616 INFO "GET / HTTP/1.1" 200 2286
+2025-03-05 18:49:53,974 INFO "GET /login/ HTTP/1.1" 200 638
+2025-03-05 18:49:58,438 INFO "GET /reset_password/ HTTP/1.1" 200 3417
+2025-03-05 18:50:02,771 INFO "POST /reset_password/ HTTP/1.1" 302 0
+2025-03-05 18:50:02,793 INFO "GET /password_reset/done/ HTTP/1.1" 200 2987
+2025-03-05 18:50:11,532 INFO "GET /reset/MQ/cm7gbd-6fc068ebd2040318bb979689131ead0d/ HTTP/1.1" 302 0
+2025-03-05 18:50:11,590 INFO "GET /reset/MQ/set-password/ HTTP/1.1" 200 3874
+2025-03-05 18:50:22,391 INFO "POST /reset/MQ/set-password/ HTTP/1.1" 200 3969
+2025-03-05 18:50:34,224 INFO "POST /reset/MQ/set-password/ HTTP/1.1" 200 3969
+2025-03-05 18:50:53,572 INFO "POST /reset/MQ/set-password/ HTTP/1.1" 302 0
+2025-03-05 18:50:53,593 INFO "GET /reset/done/ HTTP/1.1" 200 2825
+2025-03-05 18:50:55,266 WARNING Not Found: /accounts/login/
+2025-03-05 18:50:55,266 WARNING "GET /accounts/login/ HTTP/1.1" 404 6281
+2025-03-05 18:53:37,778 INFO C:\Users\Elene\PycharmProjects\pythonProject\myproject\myproject\books\urls.py changed, reloading.
+2025-03-05 18:53:38,665 INFO Watching for file changes with StatReloader
+2025-03-05 18:54:55,182 INFO C:\Users\Elene\PycharmProjects\pythonProject\myproject\myproject\books\views.py changed, reloading.
+2025-03-05 18:54:56,257 INFO Watching for file changes with StatReloader
+2025-03-05 18:55:23,852 INFO C:\Users\Elene\PycharmProjects\pythonProject\myproject\myproject\books\views.py changed, reloading.
+2025-03-05 18:55:24,442 INFO Watching for file changes with StatReloader
+2025-03-05 18:56:44,163 INFO Watching for file changes with StatReloader
+2025-03-05 18:56:45,756 INFO "GET / HTTP/1.1" 200 2286
+2025-03-05 18:56:48,829 INFO "GET /login/ HTTP/1.1" 200 638
+2025-03-05 18:56:50,570 INFO "GET /reset_password/ HTTP/1.1" 200 3417
+2025-03-05 18:56:55,061 INFO "POST /reset_password/ HTTP/1.1" 302 0
+2025-03-05 18:56:55,081 INFO "GET /password_reset/done/ HTTP/1.1" 200 2987
+2025-03-05 18:57:02,331 INFO "GET /reset/MQ/cm7gmt-fea97f1184409ecd5ec96e10f52be616/ HTTP/1.1" 302 0
+2025-03-05 18:57:02,376 INFO "GET /reset/MQ/set-password/ HTTP/1.1" 200 3874
+2025-03-05 18:57:11,289 INFO "POST /reset/MQ/set-password/ HTTP/1.1" 302 0
+2025-03-05 18:57:11,308 INFO "GET /reset/done/ HTTP/1.1" 200 2825
+2025-03-05 18:57:13,321 INFO "GET /accounts/login/ HTTP/1.1" 200 638
+2025-03-05 18:57:20,285 INFO "POST /accounts/login/ HTTP/1.1" 200 697
+2025-03-05 18:57:29,202 INFO "POST /accounts/login/ HTTP/1.1" 200 697
+2025-03-05 18:57:30,982 INFO "GET /register/ HTTP/1.1" 200 1654
+2025-03-05 18:58:46,851 INFO "GET /register HTTP/1.1" 301 0
+2025-03-05 18:58:46,877 INFO "GET /register/ HTTP/1.1" 200 1654
+2025-03-05 18:58:49,623 INFO "GET /reset_password/ HTTP/1.1" 200 3417
+2025-03-05 18:58:57,307 INFO "GET /change_password/ HTTP/1.1" 200 1383
+2025-03-05 18:59:14,970 INFO "POST /change_password/ HTTP/1.1" 200 1507
+2025-03-05 18:59:30,154 INFO "GET /register/ HTTP/1.1" 200 1654
+2025-03-05 18:59:47,466 INFO "POST /register/ HTTP/1.1" 200 1768
+2025-03-05 19:00:00,348 INFO "POST /register/ HTTP/1.1" 302 0
+2025-03-05 19:00:00,372 INFO "GET / HTTP/1.1" 200 2286
+2025-03-05 19:00:07,288 INFO "GET /login/ HTTP/1.1" 200 638
+2025-03-05 19:00:19,524 INFO "POST /login/ HTTP/1.1" 302 0
+2025-03-05 19:00:19,548 INFO "GET / HTTP/1.1" 200 2286
+2025-03-05 19:00:26,554 INFO "GET /reset_password/ HTTP/1.1" 200 3417
+2025-03-05 19:00:35,530 INFO "POST /reset_password/ HTTP/1.1" 302 0
+2025-03-05 19:00:35,534 INFO "GET /password_reset/done/ HTTP/1.1" 200 2987
+2025-03-05 19:00:43,180 INFO "GET /reset/MQ/cm7gsx-479a60b607ed2ae9cff2293230f83bbe/ HTTP/1.1" 302 0
+2025-03-05 19:00:43,204 INFO "GET /reset/MQ/set-password/ HTTP/1.1" 200 3874
+2025-03-05 19:00:52,568 INFO "POST /reset/MQ/set-password/ HTTP/1.1" 302 0
+2025-03-05 19:00:52,589 INFO "GET /reset/done/ HTTP/1.1" 200 2825
+2025-03-05 19:00:53,757 INFO "GET /accounts/login/ HTTP/1.1" 200 638
+2025-03-05 19:01:04,286 INFO "POST /accounts/login/ HTTP/1.1" 200 697
+2025-03-05 19:01:17,250 INFO "POST /accounts/login/ HTTP/1.1" 200 697
+2025-03-05 19:01:30,686 INFO "POST /accounts/login/ HTTP/1.1" 302 0
+2025-03-05 19:01:30,702 INFO "GET / HTTP/1.1" 200 2286
+2025-03-09 22:52:43,411 INFO Watching for file changes with StatReloader
+2025-03-09 22:52:45,988 INFO "GET / HTTP/1.1" 200 2284
+2025-03-09 22:52:46,044 INFO "GET /media/book_covers/cover.jpg HTTP/1.1" 304 0
+2025-03-09 22:52:46,175 WARNING Not Found: /favicon.ico
+2025-03-09 22:52:46,176 WARNING "GET /favicon.ico HTTP/1.1" 404 6512
+2025-03-09 22:52:48,889 INFO - Broken pipe from ('127.0.0.1', 52202)
+2025-03-09 22:52:48,908 INFO "GET /books/2/ HTTP/1.1" 200 1592
+2025-03-09 22:52:54,819 INFO "GET / HTTP/1.1" 200 2284
+2025-03-09 22:53:05,920 INFO "GET /books/7/ HTTP/1.1" 200 1783
+2025-03-09 22:53:07,886 WARNING Method Not Allowed (POST): /buy/7/
+2025-03-09 22:53:07,886 WARNING Method Not Allowed: /buy/7/
+2025-03-09 22:53:07,890 WARNING "POST /buy/7/ HTTP/1.1" 405 0
+2025-03-09 22:53:13,669 INFO "GET /books/2/ HTTP/1.1" 200 1592
+2025-03-09 22:53:14,597 WARNING Method Not Allowed (POST): /buy/2/
+2025-03-09 22:53:14,597 WARNING Method Not Allowed: /buy/2/
+2025-03-09 22:53:14,597 WARNING "POST /buy/2/ HTTP/1.1" 405 0
+2025-03-09 23:05:15,532 INFO C:\Users\Elene\PycharmProjects\pythonProject\myproject\myproject\books\views.py changed, reloading.
+2025-03-09 23:05:18,024 INFO Watching for file changes with StatReloader
+2025-03-09 23:05:27,793 INFO C:\Users\Elene\PycharmProjects\pythonProject\myproject\myproject\books\urls.py changed, reloading.
+2025-03-09 23:05:31,275 INFO Watching for file changes with StatReloader
+2025-03-09 23:13:52,986 INFO C:\Users\Elene\PycharmProjects\pythonProject\myproject\myproject\books\views.py changed, reloading.
+2025-03-09 23:13:55,166 INFO Watching for file changes with StatReloader
+2025-03-09 23:14:23,592 INFO C:\Users\Elene\PycharmProjects\pythonProject\myproject\myproject\books\urls.py changed, reloading.
+2025-03-09 23:14:24,847 INFO Watching for file changes with StatReloader
+2025-03-09 23:15:18,883 INFO C:\Users\Elene\PycharmProjects\pythonProject\myproject\myproject\books\urls.py changed, reloading.
+2025-03-09 23:15:30,664 INFO Watching for file changes with StatReloader
+2025-03-09 23:15:33,099 INFO "GET / HTTP/1.1" 200 2284
+2025-03-09 23:15:35,758 INFO "GET /books/2/ HTTP/1.1" 200 1592
+2025-03-09 23:15:39,616 WARNING Forbidden (Permission denied): /books/2/update/
+Traceback (most recent call last):
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\contrib\auth\mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\contrib\auth\mixins.py", line 134, in dispatch
+    return self.handle_no_permission()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\contrib\auth\mixins.py", line 48, in handle_no_permission
+    raise PermissionDenied(self.get_permission_denied_message())
+django.core.exceptions.PermissionDenied
+2025-03-09 23:15:39,709 WARNING "GET /books/2/update/ HTTP/1.1" 403 135
+2025-03-09 23:18:18,449 INFO Watching for file changes with StatReloader
+2025-03-09 23:18:20,060 INFO "GET / HTTP/1.1" 200 2284
+2025-03-09 23:18:22,308 WARNING Forbidden (Permission denied): /books/7/update/
+Traceback (most recent call last):
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\contrib\auth\mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\contrib\auth\mixins.py", line 134, in dispatch
+    return self.handle_no_permission()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\contrib\auth\mixins.py", line 48, in handle_no_permission
+    raise PermissionDenied(self.get_permission_denied_message())
+django.core.exceptions.PermissionDenied
+2025-03-09 23:18:22,322 WARNING "GET /books/7/update/ HTTP/1.1" 403 135
+2025-03-09 23:20:11,913 INFO C:\Users\Elene\PycharmProjects\pythonProject\myproject\myproject\books\views.py changed, reloading.
+2025-03-09 23:20:13,501 INFO Watching for file changes with StatReloader
+2025-03-09 23:21:13,709 INFO Watching for file changes with StatReloader
+2025-03-09 23:21:15,139 INFO "GET / HTTP/1.1" 200 2284
+2025-03-09 23:21:17,338 WARNING Forbidden (Permission denied): /books/2/update/
+Traceback (most recent call last):
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\contrib\auth\mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\contrib\auth\mixins.py", line 134, in dispatch
+    return self.handle_no_permission()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\contrib\auth\mixins.py", line 48, in handle_no_permission
+    raise PermissionDenied(self.get_permission_denied_message())
+django.core.exceptions.PermissionDenied
+2025-03-09 23:21:17,500 WARNING "GET /books/2/update/ HTTP/1.1" 403 135
+2025-03-09 23:22:05,575 INFO C:\Users\Elene\PycharmProjects\pythonProject\myproject\myproject\books\views.py changed, reloading.
+2025-03-09 23:22:15,337 INFO Watching for file changes with StatReloader
+2025-03-09 23:22:16,923 INFO "GET / HTTP/1.1" 200 2284
+2025-03-09 23:22:19,372 INFO "GET /books/2/update/ HTTP/1.1" 200 2114
+2025-03-09 23:23:18,240 INFO "POST /books/2/update/ HTTP/1.1" 302 0
+2025-03-09 23:23:18,255 INFO "GET / HTTP/1.1" 200 2284
+2025-03-09 23:23:19,806 INFO "GET /books/2/update/ HTTP/1.1" 200 2114
+2025-03-09 23:23:25,037 INFO "POST /books/2/update/ HTTP/1.1" 302 0
+2025-03-09 23:23:25,055 INFO "GET / HTTP/1.1" 200 2284
+2025-03-09 23:24:20,764 INFO Watching for file changes with StatReloader
+2025-03-09 23:24:22,206 INFO "GET / HTTP/1.1" 200 2284
+2025-03-09 23:24:23,425 WARNING Forbidden (Permission denied): /books/2/update/
+Traceback (most recent call last):
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\contrib\auth\mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\contrib\auth\mixins.py", line 134, in dispatch
+    return self.handle_no_permission()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\contrib\auth\mixins.py", line 48, in handle_no_permission
+    raise PermissionDenied(self.get_permission_denied_message())
+django.core.exceptions.PermissionDenied
+2025-03-09 23:24:23,425 WARNING "GET /books/2/update/ HTTP/1.1" 403 135
+2025-03-10 00:43:30,780 INFO Watching for file changes with StatReloader
+2025-03-10 00:43:32,818 INFO "GET / HTTP/1.1" 200 2284
+2025-03-10 00:43:35,253 ERROR Internal Server Error: /books/2/update/
+Traceback (most recent call last):
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\contrib\auth\mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\contrib\auth\mixins.py", line 132, in dispatch
+    user_test_result = self.get_test_func()()
+                       ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\contrib\auth\mixins.py", line 119, in test_func
+    raise NotImplementedError(
+NotImplementedError: BookUpdateView is missing the implementation of the test_func() method.
+2025-03-10 00:43:35,268 ERROR "GET /books/2/update/ HTTP/1.1" 500 79861
+2025-03-10 00:44:25,193 INFO C:\Users\Elene\PycharmProjects\pythonProject\myproject\myproject\books\views.py changed, reloading.
+2025-03-10 00:44:38,339 INFO Watching for file changes with StatReloader
+2025-03-10 00:44:40,069 INFO "GET / HTTP/1.1" 200 2284
+2025-03-10 00:44:48,501 INFO "GET /books/2/update/ HTTP/1.1" 200 2114
+2025-03-10 00:44:52,549 INFO "POST /books/2/update/ HTTP/1.1" 302 0
+2025-03-10 00:44:52,582 INFO "GET / HTTP/1.1" 200 2284
+2025-03-10 00:44:54,400 INFO "GET /books/2/update/ HTTP/1.1" 200 2114
+2025-03-10 00:45:33,482 INFO "POST /books/2/update/ HTTP/1.1" 302 0
+2025-03-10 00:45:33,509 INFO "GET / HTTP/1.1" 200 2284
+2025-03-10 00:45:37,366 INFO "GET / HTTP/1.1" 200 2284
+2025-03-10 00:45:44,615 INFO "GET /books/2/ HTTP/1.1" 200 1592
+2025-03-10 00:45:46,594 INFO "GET / HTTP/1.1" 200 2284
+2025-03-10 00:45:47,908 INFO "GET /books/2/update/ HTTP/1.1" 200 2114
+2025-03-10 00:45:54,964 INFO "POST /books/2/update/ HTTP/1.1" 302 0
+2025-03-10 00:45:54,985 INFO "GET / HTTP/1.1" 200 2284
+2025-03-10 00:45:56,960 INFO "GET /books/2/update/ HTTP/1.1" 200 2114
+2025-03-10 00:46:13,762 INFO "GET /books/7/update/ HTTP/1.1" 200 2393
+2025-03-10 00:46:31,138 INFO "GET /books/6/update/ HTTP/1.1" 200 1830
+2025-03-10 00:46:38,529 INFO "POST /books/6/update/ HTTP/1.1" 302 0
+2025-03-10 00:46:38,550 INFO "GET / HTTP/1.1" 200 2284
+2025-03-10 00:46:40,107 INFO "GET /books/6/update/ HTTP/1.1" 200 1831
+2025-03-10 00:46:43,774 INFO "POST /books/6/update/ HTTP/1.1" 302 0
+2025-03-10 00:46:43,800 INFO "GET / HTTP/1.1" 200 2284
+2025-03-10 00:46:49,197 INFO "GET /books/2/ HTTP/1.1" 200 1592
+2025-03-10 00:46:51,074 INFO "POST /buy/2/ HTTP/1.1" 302 0
+2025-03-10 00:46:51,091 INFO "GET / HTTP/1.1" 200 2284
+2025-03-10 00:46:58,268 INFO "GET /books/2/ HTTP/1.1" 200 1592
+2025-03-10 00:49:38,367 INFO C:\Users\Elene\PycharmProjects\pythonProject\myproject\myproject\books\views.py changed, reloading.
+2025-03-10 00:49:40,248 INFO Watching for file changes with StatReloader
+2025-03-10 00:49:56,194 INFO C:\Users\Elene\PycharmProjects\pythonProject\myproject\myproject\books\views.py changed, reloading.
+2025-03-10 00:49:57,298 INFO Watching for file changes with StatReloader
+2025-03-10 00:50:14,776 INFO Watching for file changes with StatReloader
+2025-03-10 00:50:16,343 INFO "GET / HTTP/1.1" 200 2284
+2025-03-10 00:50:18,340 INFO "GET /books/2/update/ HTTP/1.1" 200 2114
+2025-03-10 00:50:21,912 INFO "POST /books/2/update/ HTTP/1.1" 302 0
+2025-03-10 00:50:21,937 INFO "GET / HTTP/1.1" 200 2284
+2025-03-10 00:50:22,988 INFO "GET /books/2/update/ HTTP/1.1" 200 2113
+2025-03-10 00:50:26,506 INFO "POST /books/2/update/ HTTP/1.1" 302 0
+2025-03-10 00:50:26,540 INFO "GET / HTTP/1.1" 200 2284
+2025-03-10 00:50:28,809 INFO "GET /books/2/ HTTP/1.1" 200 1591
+2025-03-10 00:50:30,628 ERROR Internal Server Error: /buy/2/
+Traceback (most recent call last):
+  File "C:\Users\Elene\PycharmProjects\pythonProject\myproject\myproject\books\views.py", line 77, in post
+    logging.info(f'Email sent to {request.user.email}')
+    ^^^^^^^
+NameError: name 'logging' is not defined. Did you mean: 'login'? Or did you forget to import 'logging'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\contrib\auth\mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\.venv\Lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Elene\PycharmProjects\pythonProject\myproject\myproject\books\views.py", line 79, in post
+    logging.error(f'Error sending email: {e}')
+    ^^^^^^^
+NameError: name 'logging' is not defined. Did you mean: 'login'? Or did you forget to import 'logging'
+2025-03-10 00:50:30,642 ERROR "POST /buy/2/ HTTP/1.1" 500 87685
+2025-03-10 00:51:18,386 INFO C:\Users\Elene\PycharmProjects\pythonProject\myproject\myproject\books\views.py changed, reloading.
+2025-03-10 00:51:20,099 INFO Watching for file changes with StatReloader
+2025-03-10 00:51:32,816 INFO C:\Users\Elene\PycharmProjects\pythonProject\myproject\myproject\books\views.py changed, reloading.
+2025-03-10 00:51:34,013 INFO Watching for file changes with StatReloader
+2025-03-10 00:51:48,081 INFO C:\Users\Elene\PycharmProjects\pythonProject\myproject\myproject\books\views.py changed, reloading.
+2025-03-10 00:52:00,339 INFO Watching for file changes with StatReloader
+2025-03-10 00:52:05,812 INFO "GET / HTTP/1.1" 200 2284
+2025-03-10 00:52:08,995 INFO "GET /books/2/ HTTP/1.1" 200 1591
+2025-03-10 00:52:10,348 INFO "POST /buy/2/ HTTP/1.1" 302 0
+2025-03-10 00:52:10,358 INFO "GET / HTTP/1.1" 200 2284
+2025-03-10 00:55:32,185 INFO C:\Users\Elene\PycharmProjects\pythonProject\myproject\myproject\books\views.py changed, reloading.
+2025-03-10 00:55:42,876 INFO Watching for file changes with StatReloader
+2025-03-10 00:55:44,489 INFO "GET / HTTP/1.1" 200 2284
+2025-03-10 00:55:46,767 INFO "GET /books/2/ HTTP/1.1" 200 1591
+2025-03-10 00:55:47,982 INFO "POST /buy/2/ HTTP/1.1" 302 0
+2025-03-10 00:55:48,006 INFO "GET / HTTP/1.1" 200 2284
+2025-03-10 00:57:07,242 INFO C:\Users\Elene\PycharmProjects\pythonProject\myproject\myproject\myproject\settings.py changed, reloading.
+2025-03-10 00:57:25,878 INFO Watching for file changes with StatReloader
+2025-03-10 00:57:30,027 INFO "GET / HTTP/1.1" 200 2284
+2025-03-10 00:57:33,166 INFO "GET /books/2/ HTTP/1.1" 200 1591
+2025-03-10 00:57:34,368 INFO "POST /buy/2/ HTTP/1.1" 302 0
+2025-03-10 00:57:34,387 INFO "GET / HTTP/1.1" 200 2284
+2025-03-10 01:03:30,347 INFO C:\Users\Elene\PycharmProjects\pythonProject\myproject\myproject\books\views.py changed, reloading.
+2025-03-10 01:03:32,802 INFO Watching for file changes with StatReloader
+2025-03-10 01:03:53,699 INFO Watching for file changes with StatReloader
+2025-03-10 01:03:55,254 INFO "GET / HTTP/1.1" 200 2284
+2025-03-10 01:03:57,128 INFO "GET /books/2/update/ HTTP/1.1" 200 2113
+2025-03-10 01:03:59,670 INFO "POST /books/2/update/ HTTP/1.1" 302 0
+2025-03-10 01:03:59,685 INFO "GET / HTTP/1.1" 200 2284
+2025-03-10 01:04:00,695 INFO "GET /books/2/ HTTP/1.1" 200 1591
+2025-03-10 01:04:01,613 INFO "POST /buy/2/ HTTP/1.1" 302 0
+2025-03-10 01:04:01,632 INFO "GET / HTTP/1.1" 200 2284
+2025-03-10 01:06:52,708 INFO C:\Users\Elene\PycharmProjects\pythonProject\myproject\myproject\books\views.py changed, reloading.
+2025-03-10 01:06:53,883 INFO Watching for file changes with StatReloader
+2025-03-10 01:07:15,741 INFO C:\Users\Elene\PycharmProjects\pythonProject\myproject\myproject\books\views.py changed, reloading.
+2025-03-10 01:07:16,439 INFO Watching for file changes with StatReloader
+2025-03-10 01:08:38,622 INFO C:\Users\Elene\PycharmProjects\pythonProject\myproject\myproject\books\urls.py changed, reloading.
+2025-03-10 01:08:40,835 INFO Watching for file changes with StatReloader
+2025-03-10 01:11:49,403 INFO C:\Users\Elene\PycharmProjects\pythonProject\myproject\myproject\books\urls.py changed, reloading.
+2025-03-10 01:11:50,536 INFO Watching for file changes with StatReloader
+2025-03-10 01:12:10,708 INFO C:\Users\Elene\PycharmProjects\pythonProject\myproject\myproject\books\urls.py changed, reloading.
+2025-03-10 01:12:27,963 INFO Watching for file changes with StatReloader
+2025-03-10 01:12:29,429 INFO "GET / HTTP/1.1" 200 2284
+2025-03-10 01:12:32,760 INFO "GET /books/2/ HTTP/1.1" 200 1591
+2025-03-10 01:12:33,705 WARNING Method Not Allowed (POST): /buy/2/
+2025-03-10 01:12:33,705 WARNING Method Not Allowed: /buy/2/
+2025-03-10 01:12:33,705 WARNING "POST /buy/2/ HTTP/1.1" 405 0
+2025-03-10 01:12:38,944 INFO "GET /books/2/update/ HTTP/1.1" 200 2113
+2025-03-10 01:12:42,024 INFO "GET /books/2/ HTTP/1.1" 200 1591
+2025-03-10 01:12:42,965 WARNING Method Not Allowed (POST): /buy/2/
+2025-03-10 01:12:42,965 WARNING Method Not Allowed: /buy/2/
+2025-03-10 01:12:42,966 WARNING "POST /buy/2/ HTTP/1.1" 405 0
+2025-03-10 01:14:26,122 INFO C:\Users\Elene\PycharmProjects\pythonProject\myproject\myproject\books\views.py changed, reloading.
+2025-03-10 01:14:27,037 INFO Watching for file changes with StatReloader
+2025-03-10 01:14:49,373 INFO Watching for file changes with StatReloader
+2025-03-10 01:14:50,428 INFO "GET / HTTP/1.1" 200 2284
+2025-03-10 01:14:52,455 INFO "GET /books/2/ HTTP/1.1" 200 1591
+2025-03-10 01:14:53,264 INFO "POST /buy/2/ HTTP/1.1" 302 0
+2025-03-10 01:14:53,274 INFO "GET / HTTP/1.1" 200 2284
+2025-03-10 01:16:25,294 INFO "GET /books/2/ HTTP/1.1" 200 1591
+2025-03-10 01:16:26,279 INFO "POST /buy/2/ HTTP/1.1" 302 0
+2025-03-10 01:16:26,287 INFO "GET / HTTP/1.1" 200 2284
+2025-03-10 01:16:28,471 INFO "GET /books/2/ HTTP/1.1" 200 1591
+2025-03-10 01:18:34,076 INFO "GET /books/2/update/ HTTP/1.1" 200 2113
+2025-03-10 01:18:37,744 INFO "POST /books/2/update/ HTTP/1.1" 302 0
+2025-03-10 01:18:37,761 INFO "GET / HTTP/1.1" 200 2284
+2025-03-10 01:18:39,287 INFO "GET /books/2/update/ HTTP/1.1" 200 2114
+2025-03-10 01:18:42,483 INFO "POST /books/2/update/ HTTP/1.1" 302 0
+2025-03-10 01:18:42,500 INFO "GET / HTTP/1.1" 200 2284
+2025-03-10 01:18:43,649 INFO "GET /add/ HTTP/1.1" 200 2365
+2025-03-10 01:18:50,665 INFO "GET /books/2/update/ HTTP/1.1" 200 2114
+2025-03-10 01:18:56,825 INFO "POST /books/2/update/ HTTP/1.1" 302 0
+2025-03-10 01:18:56,845 INFO "GET / HTTP/1.1" 200 2284
+2025-03-10 01:18:58,075 INFO "GET /books/2/update/ HTTP/1.1" 200 2114
+2025-03-10 01:19:00,530 INFO "GET /add/ HTTP/1.1" 200 2365
+2025-03-10 01:20:22,911 INFO "POST /add/ HTTP/1.1" 302 0
+2025-03-10 01:20:22,930 INFO "GET / HTTP/1.1" 200 2904
+2025-03-10 01:20:23,130 INFO "GET /media/book_covers/fr.jpg HTTP/1.1" 200 806574
+2025-03-10 01:20:25,813 INFO "GET /books/8/ HTTP/1.1" 200 1596
+2025-03-10 01:20:25,833 INFO "GET /media/book_covers/fr.jpg HTTP/1.1" 304 0
+2025-03-10 01:20:27,457 INFO "POST /buy/8/ HTTP/1.1" 302 0
+2025-03-10 01:20:27,474 INFO "GET / HTTP/1.1" 200 2904
+2025-03-10 01:20:27,507 INFO "GET /media/book_covers/fr.jpg HTTP/1.1" 304 0
+2025-03-10 01:20:39,720 INFO "GET /?q=count HTTP/1.1" 200 699
+2025-03-10 01:20:44,082 INFO "GET /?q=fra HTTP/1.1" 200 1243
+2025-03-10 01:20:44,107 INFO "GET /media/book_covers/fr.jpg HTTP/1.1" 304 0
+2025-03-10 01:20:48,271 INFO "GET /?q= HTTP/1.1" 200 2904
+2025-03-10 01:20:48,277 INFO "GET /media/book_covers/fr.jpg HTTP/1.1" 304 0
+2025-03-10 01:21:15,633 INFO "GET /login/ HTTP/1.1" 200 638
+2025-03-10 01:21:20,508 INFO "GET /reset_password/ HTTP/1.1" 200 3417
+2025-03-10 01:21:20,554 INFO "GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+2025-03-10 01:21:20,557 INFO "GET /static/admin/css/base.css HTTP/1.1" 304 0
+2025-03-10 01:21:20,558 INFO "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+2025-03-10 01:21:20,559 INFO "GET /static/admin/js/theme.js HTTP/1.1" 304 0
+2025-03-10 01:21:20,569 INFO "GET /static/admin/css/forms.css HTTP/1.1" 200 8794
+2025-03-10 01:21:20,599 INFO "GET /static/admin/css/widgets.css HTTP/1.1" 200 11564
+2025-03-10 01:23:50,689 INFO C:\Users\Elene\PycharmProjects\pythonProject\myproject\myproject\books\views.py changed, reloading.
+2025-03-10 01:23:51,882 INFO Watching for file changes with StatReloader
+2025-03-11 22:41:16,771 INFO Watching for file changes with StatReloader
+2025-03-11 22:41:27,092 INFO "GET / HTTP/1.1" 200 2904
+2025-03-11 22:41:27,240 INFO "GET /media/book_covers/cover.jpg HTTP/1.1" 304 0
+2025-03-11 22:41:27,240 INFO "GET /media/book_covers/fr.jpg HTTP/1.1" 304 0
+2025-03-11 22:41:27,379 WARNING Not Found: /favicon.ico
+2025-03-11 22:41:27,379 WARNING "GET /favicon.ico HTTP/1.1" 404 6517
+2025-03-11 22:41:29,568 INFO "GET /books/2/update/ HTTP/1.1" 200 2114
+2025-03-11 22:41:32,871 INFO "GET /books/8/update/ HTTP/1.1" 200 2217
+2025-03-11 22:41:35,472 INFO "GET /books/2/ HTTP/1.1" 200 1512
+2025-03-11 22:41:36,578 INFO "POST /buy/2/ HTTP/1.1" 302 0
+2025-03-11 22:41:36,595 INFO "GET / HTTP/1.1" 200 2904
+2025-03-11 22:41:40,806 INFO "GET /login/ HTTP/1.1" 200 590
+2025-03-11 22:42:54,254 INFO Watching for file changes with StatReloader
+2025-03-11 22:42:55,383 INFO "GET / HTTP/1.1" 200 2904
+2025-03-11 22:42:57,551 INFO "GET /add/ HTTP/1.1" 200 2365
+2025-03-17 01:00:38,273 INFO Watching for file changes with StatReloader
+2025-03-17 01:00:41,173 WARNING Not Found: /
+2025-03-17 01:00:41,173 WARNING "GET / HTTP/1.1" 404 4308
+2025-03-17 01:00:41,343 WARNING Not Found: /favicon.ico
+2025-03-17 01:00:41,344 WARNING "GET /favicon.ico HTTP/1.1" 404 4359
+2025-03-17 01:03:48,337 INFO C:\Users\Elene\PycharmProjects\pythonProject\myproject\myproject\myproject\urls.py changed, reloading.
+2025-03-17 01:03:49,339 INFO Watching for file changes with StatReloader
+2025-03-17 01:04:01,064 INFO Watching for file changes with StatReloader
+2025-03-17 01:05:01,058 INFO Watching for file changes with StatReloader
+2025-03-17 01:05:25,117 INFO Watching for file changes with StatReloader
+2025-03-17 01:05:27,292 WARNING Not Found: /
+2025-03-17 01:05:27,295 WARNING "GET / HTTP/1.1" 404 2307
+2025-03-17 01:08:19,403 INFO C:\Users\Elene\PycharmProjects\pythonProject\myproject\myproject\myproject\urls.py changed, reloading.
+2025-03-17 01:08:20,604 INFO Watching for file changes with StatReloader
+2025-03-17 01:08:37,548 INFO C:\Users\Elene\PycharmProjects\pythonProject\myproject\myproject\myproject\urls.py changed, reloading.
+2025-03-17 01:08:40,146 INFO Watching for file changes with StatReloader
+2025-03-17 01:08:42,107 INFO "GET / HTTP/1.1" 302 0
+2025-03-17 01:08:42,145 INFO "GET /api/books/ HTTP/1.1" 200 9177
+2025-03-17 01:08:42,376 INFO "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121457
+2025-03-17 01:08:42,380 INFO "GET /static/rest_framework/js/csrf.js HTTP/1.1" 200 1793
+2025-03-17 01:08:42,383 INFO "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 200 39680
+2025-03-17 01:08:42,386 INFO "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 200 13632
+2025-03-17 01:08:42,390 INFO "GET /static/rest_framework/js/default.js HTTP/1.1" 200 1268
+2025-03-17 01:08:42,390 INFO "GET /static/rest_framework/js/load-ajax-form.js HTTP/1.1" 200 59
+2025-03-17 01:08:42,390 INFO "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 200 3426
+2025-03-17 01:08:42,400 INFO "GET /static/rest_framework/css/prettify.css HTTP/1.1" 200 817
+2025-03-17 01:08:42,400 INFO "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 200 3796
+2025-03-17 01:08:42,400 INFO "GET /static/rest_framework/css/default.css HTTP/1.1" 200 1152
+2025-03-17 01:08:42,400 INFO "GET /static/rest_framework/js/jquery-3.7.1.min.js HTTP/1.1" 200 87533
+2025-03-17 01:08:42,421 INFO "GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458
+2025-03-17 01:08:52,923 INFO "OPTIONS /api/books/ HTTP/1.1" 200 5547
+2025-03-17 01:08:54,831 INFO "GET /api/books/ HTTP/1.1" 200 9177
+2025-03-17 01:12:16,981 WARNING Not Found: /api/token/
+2025-03-17 01:12:16,981 WARNING "GET /api/token/ HTTP/1.1" 404 4531
+2025-03-17 01:12:45,232 WARNING Method Not Allowed: /api/api/token/
+2025-03-17 01:12:45,232 WARNING "GET /api/api/token/ HTTP/1.1" 405 7629
+2025-03-17 01:12:45,257 INFO "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+2025-03-17 01:12:45,257 INFO "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+2025-03-17 01:12:45,261 INFO "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+2025-03-17 01:12:45,261 INFO "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+2025-03-17 01:12:45,261 INFO "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+2025-03-17 01:12:45,267 INFO "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+2025-03-17 01:12:45,267 INFO "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+2025-03-17 01:12:45,269 INFO "GET /static/rest_framework/js/jquery-3.7.1.min.js HTTP/1.1" 304 0
+2025-03-17 01:12:45,269 INFO "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+2025-03-17 01:12:45,269 INFO "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+2025-03-17 01:12:45,269 INFO "GET /static/rest_framework/js/load-ajax-form.js HTTP/1.1" 304 0
+2025-03-17 01:12:45,272 INFO "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+2025-03-17 01:12:53,834 WARNING Unauthorized: /api/api/token/
+2025-03-17 01:12:53,836 WARNING "POST /api/api/token/ HTTP/1.1" 401 7569
+2025-03-17 01:13:59,721 INFO "GET /api/books/ HTTP/1.1" 200 9177
+2025-03-17 01:14:30,459 INFO "GET /api/books/ HTTP/1.1" 200 9177
+2025-03-17 01:14:30,485 INFO "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+2025-03-17 01:14:30,485 INFO "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+2025-03-17 01:14:30,485 INFO "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+2025-03-17 01:14:30,485 INFO "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+2025-03-17 01:14:30,488 INFO "GET /static/rest_framework/js/jquery-3.7.1.min.js HTTP/1.1" 304 0
+2025-03-17 01:14:30,491 INFO "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+2025-03-17 01:14:30,491 INFO "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+2025-03-17 01:14:30,491 INFO "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+2025-03-17 01:14:30,491 INFO "GET /static/rest_framework/js/load-ajax-form.js HTTP/1.1" 304 0
+2025-03-17 01:14:30,491 INFO "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+2025-03-17 01:14:30,491 INFO "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+2025-03-17 01:14:34,372 INFO "OPTIONS /api/books/ HTTP/1.1" 200 5547
+2025-03-17 01:14:37,815 INFO "GET /api/books/ HTTP/1.1" 200 9177
+2025-03-17 01:14:38,862 INFO "GET /api/books/ HTTP/1.1" 200 9177
+2025-03-17 01:15:15,925 INFO "GET /api/books/ HTTP/1.1" 200 9177
+2025-03-17 01:15:17,554 INFO "OPTIONS /api/books/ HTTP/1.1" 200 5547
+2025-03-17 01:15:42,252 INFO "OPTIONS /api/books/ HTTP/1.1" 200 5547
+2025-03-17 01:20:07,282 INFO C:\Users\Elene\PycharmProjects\pythonProject\myproject\myproject\books\views.py changed, reloading.

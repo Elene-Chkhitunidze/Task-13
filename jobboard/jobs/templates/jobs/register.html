@@ -1,0 +1,152 @@
+{% extends 'base_generic.html' %}
+
+{% block title %}Registration{% endblock %}
+
+{% block content %}
+    <style>
+        /* Body styling with gradient background */
+        body {
+            background: linear-gradient(135deg, #ece9e6, #ffffff); /* Red to white gradient */
+            font-family: 'Helvetica Neue', sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Hiding navigation */
+        nav {
+            display: none;
+        }
+    </style>
+
+    <div class="register-container">
+        <h2 class="register-title">Registration</h2>
+        <form method="POST" class="register-form" novalidate>
+            {% csrf_token %}
+            <div class="form-group">
+                <p>{{ form.username.label_tag }} {{ form.username }}
+                    {% for error in form.username.errors %}
+                        <span class="error-message">{{ error }}</span>
+                    {% endfor %}
+                </p>
+                <p>{{ form.email.label_tag }} {{ form.email }}
+                    {% for error in form.email.errors %}
+                        <span class="error-message">{{ error }}</span>
+                    {% endfor %}
+                </p>
+            </div>
+            <div class="form-group">
+                <p>{{ form.password1.label_tag }} {{ form.password1 }}
+                    {% for error in form.password1.errors %}
+                        <span class="error-message">{{ error }}</span>
+                    {% endfor %}
+                </p>
+                <p>{{ form.password2.label_tag }} {{ form.password2 }}
+                    {% for error in form.password2.errors %}
+                        <span class="error-message">{{ error }}</span>
+                    {% endfor %}
+                </p>
+            </div>
+            <div class="form-group">
+                <p>{{ form.user_type.label_tag }} {{ form.user_type }}
+                    {% for error in form.user_type.errors %}
+                        <span class="error-message">{{ error }}</span>
+                    {% endfor %}
+                </p>
+            </div>
+            <button type="submit" class="register-button">Registration</button>
+        </form>
+        <button onclick="goBack()" class="back-button">← Back</button>
+    </div>
+
+    <style>
+        /* Registration form container */
+        .register-container {
+            max-width: 500px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #fff;  /* White background for the form container */
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .register-title {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .register-form {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: space-between;
+        }
+
+        .form-group {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .form-group p {
+            width: 48%; /* 2-column layout */
+            margin: 0;
+            text-align: left;
+        }
+
+        .form-group p input,
+        .form-group p select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .register-button, .back-button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .register-button {
+            background: #007bff;
+            color: white;
+        }
+
+        .register-button:hover {
+            background: #0056b3;
+        }
+
+        .back-button {
+            background: #6c757d;
+            color: white;
+        }
+
+        .back-button:hover {
+            background: #5a6268;
+        }
+
+        .error-message {
+            color: red;
+            font-size: 14px;
+            display: block;
+            margin-top: 5px;
+        }
+    </style>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+{% endblock %}

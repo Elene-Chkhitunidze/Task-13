@@ -1,0 +1,89 @@
+{% extends 'base_generic.html' %}
+
+{% block content %}
+<style>
+    body {
+        background: linear-gradient(135deg, #ece9e6, #ffffff);
+        font-family: 'Helvetica Neue', sans-serif;
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+     /* Hiding navigation */
+     nav {
+      display: none;
+      }
+
+    .container {
+        max-width: 700px;
+        padding: 40px;
+        background: #ffffff;
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+        border-radius: 12px;
+        text-align: center;
+        margin: 0 auto; /* Ensures it's centered horizontally */
+    }
+
+    .title {
+        font-size: 24px;
+        color: #333;
+        margin-bottom: 15px;
+    }
+
+    .message {
+        font-size: 18px;
+        color: #666;
+        margin-bottom: 20px;
+    }
+
+    .button-container {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .button {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: 0.3s;
+        text-decoration: none;
+        color: white;
+        text-align: center;
+    }
+
+    .blue-button {
+        background: #007bff;
+    }
+
+    .blue-button:hover {
+        background: #0056b3;
+    }
+
+    .gray-button {
+        background: #007bff;
+    }
+
+    .gray-button:hover {
+        background: #0056b3;
+    }
+</style>
+
+<div class="container">
+    <h1 class="title">🚀 Your Resume Sent Successfully 🚀</h1>
+    <p class="message">We wish you all the best and good luck!</p>
+
+    <div class="button-container">
+        <!-- Corrected class name for Go Back button -->
+        <button onclick="window.location.href='{% url 'job_seeker_profile' %}'" class="gray-button">
+            Go Back
+        </button>
+    </div>
+</div>
+{% endblock %}

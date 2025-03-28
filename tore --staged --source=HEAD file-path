@@ -1,0 +1,144 @@
+[33mcommit 12a9c2ac3640d6133e3982182af82a371a659512[m
+Author: Elene <elenechkhitunidze@gmail.com>
+Date:   Mon Feb 17 22:26:24 2025 +0400
+
+    Remove db.sqlite3 from repository
+
+ delete mode 100644 db.sqlite3
+
+[33mcommit d4a16b8923392cd1069a15ce918ba87dbd738fca[m
+Author: Elene <elenechkhitunidze@gmail.com>
+Date:   Sat Oct 26 21:42:43 2024 +0400
+
+    add task 1
+
+ delete mode 100644 .idea/.gitignore
+ delete mode 100644 .idea/inspectionProfiles/profiles_settings.xml
+ delete mode 100644 .idea/misc.xml
+ delete mode 100644 .idea/modules.xml
+ delete mode 100644 .idea/pythonProject.iml
+ delete mode 100644 .idea/vcs.xml
+ delete mode 100644 File.txt
+ delete mode 100644 File2.txt
+ delete mode 100644 File3.txt
+ delete mode 100644 File4.txt
+ delete mode 100644 Merged.txt
+ delete mode 100644 Palindrom.txt
+ delete mode 100644 Survived.csv
+ delete mode 100644 Task 10.py
+ delete mode 100644 Task 11.py
+ delete mode 100644 Task 12.py
+ delete mode 100644 Task 2.py
+ delete mode 100644 Task 3.py
+ delete mode 100644 Task 4.py
+ delete mode 100644 Task 5.py
+ delete mode 100644 Task 6.py
+ delete mode 100644 Task 7.py
+ delete mode 100644 Task 8.py
+ delete mode 100644 Task 9.py
+ delete mode 100644 first.txt
+ delete mode 100644 sorted_csv.csv
+ delete mode 100644 split_file_0.txt
+ delete mode 100644 split_file_1.txt
+ delete mode 100644 split_file_10.txt
+ delete mode 100644 split_file_11.txt
+ delete mode 100644 split_file_12.txt
+ delete mode 100644 split_file_13.txt
+ delete mode 100644 split_file_14.txt
+ delete mode 100644 split_file_15.txt
+ delete mode 100644 split_file_16.txt
+ delete mode 100644 split_file_17.txt
+ delete mode 100644 split_file_18.txt
+ delete mode 100644 split_file_19.txt
+ delete mode 100644 split_file_2.txt
+ delete mode 100644 split_file_20.txt
+ delete mode 100644 split_file_21.txt
+ delete mode 100644 split_file_22.txt
+ delete mode 100644 split_file_23.txt
+ delete mode 100644 split_file_24.txt
+ delete mode 100644 split_file_25.txt
+ delete mode 100644 split_file_26.txt
+ delete mode 100644 split_file_27.txt
+ delete mode 100644 split_file_28.txt
+ delete mode 100644 split_file_29.txt
+ delete mode 100644 split_file_3.txt
+ delete mode 100644 split_file_30.txt
+ delete mode 100644 split_file_31.txt
+ delete mode 100644 split_file_32.txt
+ delete mode 100644 split_file_33.txt
+ delete mode 100644 split_file_34.txt
+ delete mode 100644 split_file_35.txt
+ delete mode 100644 split_file_36.txt
+ delete mode 100644 split_file_37.txt
+ delete mode 100644 split_file_38.txt
+ delete mode 100644 split_file_39.txt
+ delete mode 100644 split_file_4.txt
+ delete mode 100644 split_file_40.txt
+ delete mode 100644 split_file_41.txt
+ delete mode 100644 split_file_42.txt
+ delete mode 100644 split_file_43.txt
+ delete mode 100644 split_file_44.txt
+ delete mode 100644 split_file_45.txt
+ delete mode 100644 split_file_46.txt
+ delete mode 100644 split_file_47.txt
+ delete mode 100644 split_file_48.txt
+ delete mode 100644 split_file_49.txt
+ delete mode 100644 split_file_5.txt
+ delete mode 100644 split_file_50.txt
+ delete mode 100644 split_file_51.txt
+ delete mode 100644 split_file_52.txt
+ delete mode 100644 split_file_53.txt
+ delete mode 100644 split_file_54.txt
+ delete mode 100644 split_file_55.txt
+ delete mode 100644 split_file_56.txt
+ delete mode 100644 split_file_57.txt
+ delete mode 100644 split_file_58.txt
+ delete mode 100644 split_file_59.txt
+ delete mode 100644 split_file_6.txt
+ delete mode 100644 split_file_60.txt
+ delete mode 100644 split_file_61.txt
+ delete mode 100644 split_file_62.txt
+ delete mode 100644 split_file_63.txt
+ delete mode 100644 split_file_64.txt
+ delete mode 100644 split_file_65.txt
+ delete mode 100644 split_file_66.txt
+ delete mode 100644 split_file_67.txt
+ delete mode 100644 split_file_68.txt
+ delete mode 100644 split_file_69.txt
+ delete mode 100644 split_file_7.txt
+ delete mode 100644 split_file_70.txt
+ delete mode 100644 split_file_71.txt
+ delete mode 100644 split_file_72.txt
+ delete mode 100644 split_file_73.txt
+ delete mode 100644 split_file_74.txt
+ delete mode 100644 split_file_75.txt
+ delete mode 100644 split_file_76.txt
+ delete mode 100644 split_file_77.txt
+ delete mode 100644 split_file_78.txt
+ delete mode 100644 split_file_79.txt
+ delete mode 100644 split_file_8.txt
+ delete mode 100644 split_file_80.txt
+ delete mode 100644 split_file_81.txt
+ delete mode 100644 split_file_82.txt
+ delete mode 100644 split_file_83.txt
+ delete mode 100644 split_file_84.txt
+ delete mode 100644 split_file_85.txt
+ delete mode 100644 split_file_86.txt
+ delete mode 100644 split_file_87.txt
+ delete mode 100644 split_file_88.txt
+ delete mode 100644 split_file_89.txt
+ delete mode 100644 split_file_9.txt
+ delete mode 100644 split_file_90.txt
+ delete mode 100644 split_file_91.txt
+ delete mode 100644 split_file_92.txt
+ delete mode 100644 split_file_93.txt
+ delete mode 100644 split_file_94.txt
+ delete mode 100644 split_file_95.txt
+ delete mode 100644 split_file_96.txt
+ delete mode 100644 split_file_97.txt
+ delete mode 100644 split_file_98.txt
+ delete mode 100644 split_file_99.txt
+ delete mode 100644 split_file_{count}
+ delete mode 100644 ssl_companies.csv
+ delete mode 100644 "\342\200\234ssl_companies.cs"
+ delete mode 100644 "\342\200\234ssl_companies.csv"
