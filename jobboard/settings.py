@@ -140,3 +140,12 @@ AUTHENTICATION_BACKENDS = [
 
 AUTH_USER_MODEL = 'jobs.CustomUser'
 LOGOUT_REDIRECT_URL = '/'  # Redirects to home page after logout
+
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'elenechkhitunidze@gmail.com'  # Your Gmail address
+EMAIL_HOST_PASSWORD = 'eskv krqi psvf qrbj'  # Use an App Password if 2FA is enabled
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER

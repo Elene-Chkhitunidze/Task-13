@@ -4,15 +4,25 @@ from django.contrib.auth.forms import AuthenticationForm
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.utils import timezone
-from .models import Job, JobApplication, FavoriteJob
-from .forms import CustomUserCreationForm, JobForm
+
+from .forms import CustomUserCreationForm
 from django.contrib.auth import logout
 from django.shortcuts import render
 from django.http import HttpResponse
-from .models import CustomUser
-from .forms import EmployerProfileForm, VacancyForm
-from .models import EmployerProfile, Vacancy
 
+from .forms import EmployerProfileForm, VacancyForm, PasswordResetForm, JobApplicationForm, JobSeekerProfile
+from .models import EmployerProfile
+
+from django.contrib import messages
+
+from django.contrib.auth import get_user_model
+
+from .models import Vacancy
+
+
+from django.core.mail import EmailMultiAlternatives
+from django.core.exceptions import ObjectDoesNotExist
+from django.core.paginator import Paginator
 
 def home(request):
     if request.method == "POST":
@@ -34,30 +44,56 @@ def register(request):
 
             if user.user_type == 'employer':
                 return redirect("employer_profile")  # Redirect employers to profile setup
-
-            return redirect("home")  # Redirect job seekers elsewhere
+            elif user.user_type == 'job_seeker':
+                return redirect("job_seeker_profile")  # Redirect job seekers to job seeker page
     else:
         form = CustomUserCreationForm()
-    return render(request, "jobs/register.html", {"form": form})
 
+    return render(request, "jobs/register.html", {"form": form})
 
 # Login View
 def login_view(request):
     if request.method == 'POST':
-        email = request.POST.get('username')
+        email = request.POST.get('username')  # Assuming 'username' is used for email input
         password = request.POST.get('password')
 
-        user = authenticate(request, email=email, password=password)
+        # Authenticate using email (CustomUser model uses email as the username)
+        user = authenticate(request, username=email, password=password)
         if user:
             login(request, user)
             if user.user_type == 'employer':
                 return redirect("employer_profile")  # Redirect employers to profile page
-            return redirect("home")
+            elif user.user_type == 'job_seeker':
+                return redirect("job_seeker_profile")  # Redirect job seekers to their page
+            return redirect("home")  # Or redirect to a general homepage
         else:
             messages.error(request, "Invalid email or password.")
 
     return render(request, 'jobs/login.html', {'form': AuthenticationForm()})
 
+def forgot_password(request):
+    if request.method == 'POST':
+        form = PasswordResetForm(request.POST)
+        if form.is_valid():
+            email = form.cleaned_data.get('email')
+            new_password = form.cleaned_data.get('new_password')
+
+            try:
+                User = get_user_model()
+                user = User.objects.get(email=email)
+                user.set_password(new_password)
+                user.save()
+                messages.success(request, 'Your password has been successfully reset!')
+                return redirect('login')
+            except User.DoesNotExist:
+                messages.error(request, 'User with this email does not exist.')
+        else:
+            # If form is not valid, messages will be displayed via form errors
+            pass
+    else:
+        form = PasswordResetForm()
+
+    return render(request, 'jobs/reset_password.html', {'form': form})
 
 @login_required
 def employer_profile(request):
@@ -143,80 +179,90 @@ def custom_logout(request):
 def home_view(request):
     return render(request, 'home.html')  # Render your home page template
 
-# Job List View (with filtering by status)
-def job_list(request):
-    status_filter = request.GET.get('status')  # Get status from query params
-    if status_filter:
-        jobs = Job.objects.filter(status=status_filter)
-    else:
-        jobs = Job.objects.all()
-    return render(request, 'jobs/job_list.html', {'jobs': jobs, 'status_filter': status_filter})
 
-# Job Detail View
-def job_detail(request, job_id):
-    job = get_object_or_404(Job, id=job_id)
-    return render(request, 'jobs/job_detail.html', {'job': job})
 
-# Apply for Job View (Check if the deadline is passed)
+# Job Seeker Profile View
 @login_required
-def apply_for_job(request, job_id):
-    job = get_object_or_404(Job, id=job_id)
+def job_seeker_profile(request):
+    # Get the search query parameters
+    search_company = request.GET.get('search_company', '')
+    search_title = request.GET.get('search_title', '')
 
-    # Check if the job deadline has passed
-    if job.deadline and job.deadline < timezone.now():
-        messages.error(request, 'This job application deadline has passed.')
-        return redirect('job_list')  # Redirect to job list if deadline is passed
+    # Fetch all vacancies by default
+    vacancies = Vacancy.objects.all()
 
-    if request.method == "POST":
-        cover_letter = request.POST.get('cover_letter')
-        if cover_letter:
-            JobApplication.objects.create(job=job, applicant=request.user, cover_letter=cover_letter)
-            messages.success(request, 'Your application has been submitted!')
-            return redirect('job_list')  # Redirect to job list after application
-        else:
-            messages.error(request, 'Cover letter is required!')
-            return render(request, 'jobs/apply_job.html', {'job': job})
-    return render(request, 'jobs/apply_job.html', {'job': job})
+    # Filter vacancies based on search queries
+    if search_company:
+        vacancies = vacancies.filter(company__icontains=search_company)
+    if search_title:
+        vacancies = vacancies.filter(title__icontains=search_title)
 
-# Add Job to Favorites View
+    # Implement pagination
+    paginator = Paginator(vacancies, 10)  # Show 10 vacancies per page
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)
+
+    context = {
+        'vacancies': page_obj,
+        'search_company': search_company,
+        'search_title': search_title
+    }
+
+    return render(request, 'jobs/job_seeker_profile.html', context)
 @login_required
-def add_to_favorites(request, job_id):
-    job = get_object_or_404(Job, id=job_id)
-    # Check if the job is already in favorites for the user to avoid duplicates
-    favorite, created = FavoriteJob.objects.get_or_create(user=request.user, job=job)
-    if created:
-        messages.success(request, 'Job added to favorites!')
-    else:
-        messages.info(request, 'Job is already in your favorites.')
-    return redirect('job_list')  # Redirect to job list after adding to favorites
+def vacancy_detail_job_seeker(request, vacancy_id):
+    vacancy = get_object_or_404(Vacancy, pk=vacancy_id)
 
-# Favorite Jobs View
+    if request.method == 'POST':
+        # Check if resume is uploaded
+        if 'resume' not in request.FILES:
+            messages.error(request, "Please upload your resume!")
+            return render(request, 'jobs/vacancy_detail_job_seeker.html', {'vacancy': vacancy})
+
+        # Save the uploaded resume
+        resume = request.FILES['resume']
+
+        try:
+            # Find the employer profile associated with the vacancy's company
+            employer_profile = EmployerProfile.objects.get(company_name=vacancy.company)
+            recipient_email = employer_profile.user.email
+
+            # Compose email with improved attachment handling
+            from django.core.mail import EmailMessage
+
+            email = EmailMessage(
+                subject=f"Job Application for {vacancy.title}",
+                body=f"""
+                Dear Hiring Manager,
+
+                I am applying for the position of {vacancy.title} at {vacancy.company}.
+
+                Best regards,
+                {request.user.username}
+                """,
+                from_email=request.user.email,
+                to=[recipient_email],
+            )
+
+            # Directly attach the file using the original Django method
+            email.attach(resume.name, resume.read(), resume.content_type)
+
+            try:
+                # Send the email
+                email.send(fail_silently=False)
+                return redirect('resume_upload_success')
+
+            except Exception as email_error:
+                import traceback
+                print(f"Email sending error: {email_error}")
+                traceback.print_exc()
+                messages.error(request, f"Failed to send application: {str(email_error)}")
+
+        except EmployerProfile.DoesNotExist:
+            messages.error(request, "Could not find employer contact information.")
+
+    return render(request, 'jobs/vacancy_detail_job_seeker.html', {'vacancy': vacancy})
+
 @login_required
-def favorite_jobs(request):
-    favorites = FavoriteJob.objects.filter(user=request.user)
-    return render(request, 'jobs/favorites.html', {'favorites': favorites})
-
-# Job Creation View (Only for Employers)
-@login_required
-def job_create(request):
-    # Check if the user is an employer before allowing job creation
-    if not request.user.user_type == 'employer':
-        messages.error(request, "You need to be an employer to create a job listing.")
-        return redirect('job_list')  # Redirect to job list if user is not an employer
-
-    if request.method == "POST":
-        form = JobForm(request.POST)
-        if form.is_valid():
-            job = form.save(commit=False)
-            job.employer = request.user  # Assign the current logged-in user as the employer
-            job.save()
-            messages.success(request, 'Job has been created successfully!')
-            return redirect('job_list')  # Redirect to the job list page
-    else:
-        form = JobForm()
-    return render(request, 'jobs/job_form.html', {'form': form})
-
-
-def logout_view(request):
-    logout(request)
-    return redirect('login')  # მომხმარებელი გადამისამართდება ლოგინის გვერდზე
+def resume_upload_success(request):
+    return render(request, 'jobs/resume_upload_success.html')
