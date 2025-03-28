@@ -13,8 +13,8 @@
         <nav>
             <ul>
                 <li><a href="/">Home</a></li>
-                <li><a href="{% url 'job_list' %}">Jobs</a></li>
-                <li><a href="{% url 'favorite_jobs' %}">Favorites</a></li>
+
+
                 {% if user.is_authenticated %}
                     <li><a href="{% url 'logout' %}">Logout</a></li>
                 {% else %}

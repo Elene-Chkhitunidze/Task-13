@@ -79,11 +79,11 @@ WSGI_APPLICATION = 'jobboard.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'jobboard_db',  ## PostgreSQL-ში შექმნილი ბაზის სახელი
-        'USER': 'jobboard_user',  ## PostgreSQL მომხმარებლის სახელი
-        'PASSWORD': '123456',  ## PostgreSQL მომხმარებლის პაროლი
-        'HOST': 'localhost',  ## სერვერის მისამართი
-        'PORT': '5432',  ## PostgreSQL-ის ნაგულისხმევი პორტი
+        'NAME': 'jobboard_db',
+        'USER': 'jobboard_user',
+        'PASSWORD': '123456',
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
 }
 
@@ -131,7 +131,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
-LOGIN_URL = '/login/'  # URL for login
+LOGIN_URL = '/login/'
 
 
 AUTHENTICATION_BACKENDS = [
@@ -139,13 +139,13 @@ AUTHENTICATION_BACKENDS = [
 ]
 
 AUTH_USER_MODEL = 'jobs.CustomUser'
-LOGOUT_REDIRECT_URL = '/'  # Redirects to home page after logout
+LOGOUT_REDIRECT_URL = '/'
 
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'elenechkhitunidze@gmail.com'  # Your Gmail address
-EMAIL_HOST_PASSWORD = 'eskv krqi psvf qrbj'  # Use an App Password if 2FA is enabled
+EMAIL_HOST_USER = 'elenechkhitunidze@gmail.com'
+EMAIL_HOST_PASSWORD = 'eskv krqi psvf qrbj'
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER

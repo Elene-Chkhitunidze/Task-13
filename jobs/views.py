@@ -209,9 +209,13 @@ def job_seeker_profile(request):
     }
 
     return render(request, 'jobs/job_seeker_profile.html', context)
+
 @login_required
 def vacancy_detail_job_seeker(request, vacancy_id):
     vacancy = get_object_or_404(Vacancy, pk=vacancy_id)
+
+    # Get or create JobSeekerProfile for the current user
+    job_seeker_profile, created = JobSeekerProfile.objects.get_or_create(user=request.user)
 
     if request.method == 'POST':
         # Check if resume is uploaded
@@ -221,45 +225,54 @@ def vacancy_detail_job_seeker(request, vacancy_id):
 
         # Save the uploaded resume
         resume = request.FILES['resume']
+        job_seeker_profile.resume = resume
+        job_seeker_profile.save()
 
         try:
             # Find the employer profile associated with the vacancy's company
-            employer_profile = EmployerProfile.objects.get(company_name=vacancy.company)
-            recipient_email = employer_profile.user.email
+            try:
+                employer_profile = EmployerProfile.objects.get(company_name=vacancy.company)
+                recipient_email = employer_profile.user.email  # Get the email of the user who created the profile
+            except EmployerProfile.DoesNotExist:
+                messages.error(request, "Could not find employer contact information.")
+                return render(request, 'jobs/vacancy_detail_job_seeker.html', {'vacancy': vacancy})
 
-            # Compose email with improved attachment handling
-            from django.core.mail import EmailMessage
+            # Prepare email
+            subject = f"Job Application for {vacancy.title}"
 
-            email = EmailMessage(
-                subject=f"Job Application for {vacancy.title}",
-                body=f"""
-                Dear Hiring Manager,
+            # Compose email body
+            email_body = f"""
+            Dear Hiring Manager,
 
-                I am applying for the position of {vacancy.title} at {vacancy.company}.
+            I am applying for the position of {vacancy.title} at {vacancy.company}.
 
-                Best regards,
-                {request.user.username}
-                """,
-                from_email=request.user.email,
-                to=[recipient_email],
-            )
+            Best regards,
+            {request.user.username}
+            """
 
-            # Directly attach the file using the original Django method
-            email.attach(resume.name, resume.read(), resume.content_type)
+            # Create email message
+            from django.core.mail import send_mail
 
             try:
-                # Send the email
-                email.send(fail_silently=False)
+                send_mail(
+                    subject=subject,
+                    message=email_body,
+                    from_email=request.user.email,
+                    recipient_list=[recipient_email],
+                    fail_silently=False,
+                )
+                # Redirect to new success page
                 return redirect('resume_upload_success')
 
             except Exception as email_error:
+                # Log the full error details
                 import traceback
                 print(f"Email sending error: {email_error}")
                 traceback.print_exc()
                 messages.error(request, f"Failed to send application: {str(email_error)}")
 
-        except EmployerProfile.DoesNotExist:
-            messages.error(request, "Could not find employer contact information.")
+        except Exception as e:
+            messages.error(request, f"Unexpected error: {str(e)}")
 
     return render(request, 'jobs/vacancy_detail_job_seeker.html', {'vacancy': vacancy})
 

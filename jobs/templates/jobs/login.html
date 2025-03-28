@@ -3,172 +3,145 @@
 {% block title %}Login{% endblock %}
 
 {% block content %}
-    <style>
-        /* Body styling with gradient background */
-        body {
-            background: linear-gradient(135deg, #ece9e6, #ffffff); /* Red to white gradient */
-            font-family: 'Helvetica Neue', sans-serif;
-            margin: 0;
-            padding: 0;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+<style>
+    body {
+        background: linear-gradient(135deg, #ece9e6, #ffffff);
+        font-family: 'Helvetica Neue', sans-serif;
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
-        /* Hide navigation */
-        nav {
-            display: none;
-        }
-    </style>
+    nav {
+        display: none;
+    }
 
-    <div class="login-container">
-        <h2 class="login-title">Authorization</h2>
+    .login-container {
+        max-width: 500px;
+        margin: 50px auto;
+        padding: 20px;
+        background: #ffffff;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        text-align: center;
+    }
 
-        <!-- Messages Section (displaying errors or success) -->
-        {% if messages %}
-            <div class="alert-container">
-                {% for message in messages %}
-                    <div class="alert alert-{{ message.tags }}" style="color: red;">
-                        {{ message }}
-                    </div>
+    .login-title {
+        font-size: 24px;
+        color: #333;
+        margin-bottom: 15px;
+    }
+
+    .login-form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        justify-content: space-between;
+    }
+
+    .form-group {
+        width: 100%;
+        text-align: left;
+        margin-bottom: 10px;
+    }
+
+    .form-group p input {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    .button-container {
+        display: flex;
+        justify-content: center;
+        gap: 20px;  /* Add space between buttons */
+        margin-top: 20px;
+    }
+
+    .login-button, .back-button {
+        width: 48%;  /* Adjusting button width to fit side by side */
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: 0.3s;
+        text-align: center;
+        text-decoration: none;  /* Remove underline */
+    }
+
+    .login-button {
+        background: #007bff;
+        color: white;
+    }
+
+    .login-button:hover {
+        background: #0056b3;
+    }
+
+    .back-button {
+        background: #6c757d;
+        color: white;
+    }
+
+    .back-button:hover {
+        background: #5a6268;
+    }
+
+    .forgot-password {
+        display: block;
+        margin-top: 10px;
+        font-size: 14px;
+        color: #007bff;
+        text-decoration: none;
+    }
+
+    .forgot-password:hover {
+        text-decoration: underline;
+    }
+</style>
+
+<div class="login-container">
+    <h2 class="login-title">Authorization</h2>
+
+    {% if messages %}
+        <div class="alert-container">
+            {% for message in messages %}
+                <div class="alert alert-{{ message.tags }}" style="color: red;">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        </div>
+    {% endif %}
+
+    <form method="POST" class="login-form" novalidate>
+        {% csrf_token %}
+        <div class="form-group">
+            <p>Email: {{ form.username }}
+                {% for error in form.username.errors %}
+                    <span class="error-message">{{ error }}</span>
                 {% endfor %}
-            </div>
-        {% endif %}
+            </p>
+        </div>
+        <div class="form-group">
+            <p>{{ form.password.label_tag }} {{ form.password }}
+                {% for error in form.password.errors %}
+                    <span class="error-message">{{ error }}</span>
+                {% endfor %}
+            </p>
+        </div>
 
-        <form method="POST" class="login-form" novalidate>
-            {% csrf_token %}
-            <div class="form-group">
-                <p>Email: {{ form.username }}
-                    {% for error in form.username.errors %}
-                        <span class="error-message">{{ error }}</span>
-                    {% endfor %}
-                </p>
-            </div>
-            <div class="form-group">
-                <p>{{ form.password.label_tag }} {{ form.password }}
-                    {% for error in form.password.errors %}
-                        <span class="error-message">{{ error }}</span>
-                    {% endfor %}
-                </p>
-            </div>
+        <div class="button-container">
             <button type="submit" class="login-button">Authorization</button>
-        </form>
-        <button onclick="goBack()" class="back-button">← Back</button>
-    </div>
+            <a href="{% url 'home' %}" class="back-button">← Back</a>
+        </div>
+    </form>
 
-    <style>
-        /* ლოგინის ფორმის კონტეინერი */
-        .login-container {
-            max-width: 500px;
-            margin: 50px auto;
-            padding: 20px;
-            background: #ffffff;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-            text-align: center;
-        }
+    <a href="{% url 'reset_password' %}" class="forgot-password">Forgot Password?</a>
+</div>
 
-        .login-title {
-            font-size: 24px;
-            color: #333;
-            margin-bottom: 15px;
-        }
-
-
-        .login-form {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            justify-content: space-between;
-        }
-
-        .form-group {
-            display: flex;
-            justify-content: space-between;
-            width: 100%;
-        }
-
-        .form-group p {
-            width: 48%; /* 2 სვეტი */
-            margin: 0;
-            text-align: left;
-        }
-
-        .form-group p input {
-            width: 100%;
-            padding: 8px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-
-        .login-button, .back-button {
-            width: 100%;
-            padding: 10px;
-            margin-top: 10px;
-            border: none;
-            border-radius: 5px;
-            font-size: 16px;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-
-        .login-button {
-            background: #007bff;
-            color: white;
-        }
-
-        .login-button:hover {
-            background: #0056b3;
-        }
-
-        .back-button {
-            background: #6c757d;
-            color: white;
-        }
-
-        .back-button:hover {
-            background: #5a6268;
-        }
-
-        .error-message {
-            color: red;
-            font-size: 14px;
-            display: block;
-            margin-top: 5px;
-        }
-
-        /* Alert message styles */
-        .alert-container {
-            margin-bottom: 20px;
-        }
-
-        .alert {
-            padding: 10px;
-            margin: 10px 0;
-            border-radius: 5px;
-            font-size: 14px;
-        }
-
-        .alert-info {
-            background-color: #d1ecf1;
-            color: #0c5460;
-        }
-
-        .alert-warning {
-            background-color: #fff3cd;
-            color: #856404;
-        }
-
-        .alert-danger {
-            background-color: #f8d7da;
-            color: red;
-        }
-    </style>
-
-    <script>
-        function goBack() {
-            window.history.back();
-        }
-    </script>
 {% endblock %}
